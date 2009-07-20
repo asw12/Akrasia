@@ -8,6 +8,7 @@ import java.awt.Point;
 
 import java.util.HashMap;
 import java.util.List;
+
 /**
  * This is an interface of maps that is shared between the version the client views and what the
  * server uses to store.

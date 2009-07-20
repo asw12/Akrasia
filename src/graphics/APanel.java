@@ -17,6 +17,9 @@ import java.util.Set;
 
 import javax.swing.JPanel;
 
+/**
+ * A panel for displaying the main screen of Akrasia
+ */
 public class APanel extends JPanel {
     public APanel(SimpleGUI gui) {
         this.gui = gui;

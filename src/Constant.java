@@ -43,9 +43,10 @@ public class Constant {
         }
     }
     
-     /****************
-      * Message Passing Scheme
-      ****************/
+    /****************
+     * Message Passing
+     ****************/
+    
     public final byte RequiresThing =                      0x01;
     public final byte RequiresThing2 =                     0x02;
     public final byte RequiresDestination =                0x04;
@@ -117,7 +118,9 @@ public class Constant {
     }
     
     /**
-     * Structure of the dungeon: Wall or Floor
+     * This class represents an object in the cell that is part of the structure of teh dungeon.
+     * 
+     * Structure of the dungeon: Wall or Floor.
      */
     public static class STRUCT{
         public enum FLOOR{
@@ -155,6 +158,13 @@ public class Constant {
      * Vision Methods
      ****************/
     
+    /**
+     *
+     * @param x
+     * @param y
+     * @param radius
+     * @return
+     */
     public static ArrayList<Point> CircleOfPoints(int x, int y, int radius){
         ArrayList<Point> points = new ArrayList<Point>();
         points.add(new Point(x, y));
