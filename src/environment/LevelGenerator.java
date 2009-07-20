@@ -14,6 +14,7 @@ public class LevelGenerator {
         this(m, 0, m.width, 0, m.height);
     }
     public LevelGenerator(LevelMap m, int x, int w, int y, int h) {
+        map = m;
         x_offset = x;
         y_offset = y;
         width = w;
@@ -46,12 +47,12 @@ public class LevelGenerator {
     
     public void RectangularRoomTest(int x, int y, int w, int h){
         ArrayList<Point> points = new ArrayList<Point>();
-        for(int xx = x; xx <= xx+w; xx++){
-            for(int yy = y; yy <= yy+h; yy++){
+        for(int xx = x; xx <= x+w; xx++){
+            for(int yy = y; yy <= y+h; yy++){
                 points.add(new Point(xx,yy));
             }
         }
-        
+
         for(Point p : points){
             if(map.FloorTiles.containsKey(p)){
                 System.out.println("Intersection");
