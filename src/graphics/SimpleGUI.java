@@ -68,7 +68,7 @@ public class SimpleGUI extends GUI{
         
         // Blank window will appear if no server can be found
         try{
-            simple.client.JoinServer(InetAddress.getByName("127.0.0.1"), 6112);
+            simple.client.JoinServer(InetAddress.getByName("67.180.54.71"), 6112);
             
             //simple2.client.JoinServer(InetAddress.getLocalHost(), 6112);
         }

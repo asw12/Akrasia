@@ -32,4 +32,7 @@ public interface Map {
     public Point GetLocationOfThing(Thing thing);
     
     public Thing[] LocationThings(Point point);
+    
+    public int height = 1000;
+    public int width = 1000;
 }
