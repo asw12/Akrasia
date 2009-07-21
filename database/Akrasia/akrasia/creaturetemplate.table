@@ -1,0 +1,1267 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1111/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <name>creaturetemplate</name>
+    <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+    <schemaName>akrasia</schemaName>
+    <type>TABLE</type>
+  </ID>
+  <name>creaturetemplate</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>entry</name>
+        <identifier class="java.lang.String">6e35c63c-5b0d-421c-931b-88130e0d87c7</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>creaturetemplate</name>
+          <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+          <schemaName>akrasia</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>akrasia</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>entry</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">4d8de8b0-fae9-4e79-9c70-b3a600c5caa5</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>entry</name>
+            <identifier class="java.lang.String">6e35c63c-5b0d-421c-931b-88130e0d87c7</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>creaturetemplate</name>
+              <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>akrasia</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>akrasia</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">10</value>
+          </entry>
+          <entry>
+            <key>unsigned</key>
+            <value class="java.lang.String">UNSIGNED</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.mysql.MySQLDatabaseImpl</providerClass>
+          <typeName>INT</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>entry</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>creaturetemplate</name>
+                  <schemaName>akrasia</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>entry</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>creaturetemplate</name>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>name</name>
+        <identifier class="java.lang.String">a6b715a4-188d-45c8-a67c-3c6f4c323dd4</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>creaturetemplate</name>
+          <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+          <schemaName>akrasia</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>akrasia</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>name</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">e435e36f-4349-4f9a-a894-76cadf8ae0cc</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>name</name>
+            <identifier class="java.lang.String">a6b715a4-188d-45c8-a67c-3c6f4c323dd4</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>creaturetemplate</name>
+              <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>akrasia</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>akrasia</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">255</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.mysql.MySQLDatabaseImpl</providerClass>
+          <typeName>VARCHAR</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>name</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>creaturetemplate</name>
+                  <schemaName>akrasia</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>name</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>creaturetemplate</name>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>char</name>
+        <identifier class="java.lang.String">9b6d587d-ca1d-4dcb-b13c-d311c4dc89be</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>creaturetemplate</name>
+          <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+          <schemaName>akrasia</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>akrasia</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>char</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">52f6d415-c462-47f8-8b36-b6877e52d8a5</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>char</name>
+            <identifier class="java.lang.String">9b6d587d-ca1d-4dcb-b13c-d311c4dc89be</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>creaturetemplate</name>
+              <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>akrasia</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>akrasia</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">9</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.mysql.MySQLDatabaseImpl</providerClass>
+          <typeName>VARCHAR</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>char</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>creaturetemplate</name>
+                  <schemaName>akrasia</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <default class="java.lang.String">&apos;M&apos;</default>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>char</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>creaturetemplate</name>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>levelmin</name>
+        <identifier class="java.lang.String">77ef12aa-99f8-4a03-bce2-fb49c145cfce</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>creaturetemplate</name>
+          <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+          <schemaName>akrasia</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>akrasia</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>levelmin</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">398e7ee9-3b8b-4069-832a-f27f35fe77fc</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>levelmin</name>
+            <identifier class="java.lang.String">77ef12aa-99f8-4a03-bce2-fb49c145cfce</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>creaturetemplate</name>
+              <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>akrasia</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>akrasia</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">10</value>
+          </entry>
+          <entry>
+            <key>unsigned</key>
+            <value class="java.lang.String">UNSIGNED</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.mysql.MySQLDatabaseImpl</providerClass>
+          <typeName>INT</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>levelmin</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>creaturetemplate</name>
+                  <schemaName>akrasia</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <default class="java.lang.String">1</default>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>levelmin</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>creaturetemplate</name>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>levelmax</name>
+        <identifier class="java.lang.String">bb6281e8-707b-417f-a5f7-e6a8a7fb34f0</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>creaturetemplate</name>
+          <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+          <schemaName>akrasia</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>akrasia</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>levelmax</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">78e802ba-f2d0-4e61-9653-7015658632da</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>levelmax</name>
+            <identifier class="java.lang.String">bb6281e8-707b-417f-a5f7-e6a8a7fb34f0</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>creaturetemplate</name>
+              <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>akrasia</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>akrasia</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">10</value>
+          </entry>
+          <entry>
+            <key>unsigned</key>
+            <value class="java.lang.String">UNSIGNED</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.mysql.MySQLDatabaseImpl</providerClass>
+          <typeName>INT</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>levelmax</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>creaturetemplate</name>
+                  <schemaName>akrasia</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <default class="java.lang.String">1</default>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>levelmax</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>creaturetemplate</name>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>size</name>
+        <identifier class="java.lang.String">99fb23ee-94e0-41bd-9ff9-84ab4c5f5179</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>creaturetemplate</name>
+          <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+          <schemaName>akrasia</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>akrasia</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>size</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">5bb3c419-5b5b-42d9-aad8-f0fc6ff9dc16</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>size</name>
+            <identifier class="java.lang.String">99fb23ee-94e0-41bd-9ff9-84ab4c5f5179</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>creaturetemplate</name>
+              <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>akrasia</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>akrasia</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">10</value>
+          </entry>
+          <entry>
+            <key>unsigned</key>
+            <value class="java.lang.String">UNSIGNED</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.mysql.MySQLDatabaseImpl</providerClass>
+          <typeName>INT</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>size</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>creaturetemplate</name>
+                  <schemaName>akrasia</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <default class="java.lang.String">1</default>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>size</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>creaturetemplate</name>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>type</name>
+        <identifier class="java.lang.String">1d861fcc-6d7a-4741-a7f2-fd818bd84f2f</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>creaturetemplate</name>
+          <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+          <schemaName>akrasia</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>akrasia</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>type</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">a1697cbe-bc67-4c29-a904-452b1dcf3bfd</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>type</name>
+            <identifier class="java.lang.String">1d861fcc-6d7a-4741-a7f2-fd818bd84f2f</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>creaturetemplate</name>
+              <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>akrasia</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>akrasia</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">10</value>
+          </entry>
+          <entry>
+            <key>unsigned</key>
+            <value class="java.lang.String">UNSIGNED</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.mysql.MySQLDatabaseImpl</providerClass>
+          <typeName>INT</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>type</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>creaturetemplate</name>
+                  <schemaName>akrasia</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <default class="java.lang.String">1</default>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Should be an enum</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>type</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>creaturetemplate</name>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>hitdie</name>
+        <identifier class="java.lang.String">71517f54-2a1f-487a-a540-d2f6de0e666a</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>creaturetemplate</name>
+          <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+          <schemaName>akrasia</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>akrasia</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>hitdie</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">66eeeb85-ee16-46d5-87cf-557075cb60cb</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>hitdie</name>
+            <identifier class="java.lang.String">71517f54-2a1f-487a-a540-d2f6de0e666a</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>creaturetemplate</name>
+              <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>akrasia</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>akrasia</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">10</value>
+          </entry>
+          <entry>
+            <key>unsigned</key>
+            <value class="java.lang.String">UNSIGNED</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.mysql.MySQLDatabaseImpl</providerClass>
+          <typeName>INT</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>hitdie</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>creaturetemplate</name>
+                  <schemaName>akrasia</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <default class="java.lang.String">2</default>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>hitdie</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>creaturetemplate</name>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>armorclass</name>
+        <identifier class="java.lang.String">cf4d7999-e8b4-40f2-8ce9-d362905d526d</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>creaturetemplate</name>
+          <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+          <schemaName>akrasia</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>akrasia</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>armorclass</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">ec27f6cc-f08a-46d9-befd-45536f93e992</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>armorclass</name>
+            <identifier class="java.lang.String">cf4d7999-e8b4-40f2-8ce9-d362905d526d</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>creaturetemplate</name>
+              <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>akrasia</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>akrasia</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">10</value>
+          </entry>
+          <entry>
+            <key>unsigned</key>
+            <value class="java.lang.String">UNSIGNED</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.mysql.MySQLDatabaseImpl</providerClass>
+          <typeName>INT</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>armorclass</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>creaturetemplate</name>
+                  <schemaName>akrasia</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <default class="java.lang.String">0</default>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>armorclass</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>creaturetemplate</name>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>evade</name>
+        <identifier class="java.lang.String">4b88095a-0f02-499b-b557-067fedebc4db</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>creaturetemplate</name>
+          <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+          <schemaName>akrasia</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>akrasia</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>evade</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">57e13966-74ea-49e9-bcde-2c4c098c80be</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>evade</name>
+            <identifier class="java.lang.String">4b88095a-0f02-499b-b557-067fedebc4db</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>creaturetemplate</name>
+              <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>akrasia</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>akrasia</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">255</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.mysql.MySQLDatabaseImpl</providerClass>
+          <typeName>VARCHAR</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>evade</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>creaturetemplate</name>
+                  <schemaName>akrasia</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <default class="java.lang.String">&apos;0&apos;</default>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>evade</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>creaturetemplate</name>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>accuracy</name>
+        <identifier class="java.lang.String">86e82bfe-7adc-457a-8e3d-459c01a68abc</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>creaturetemplate</name>
+          <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+          <schemaName>akrasia</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>akrasia</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>accuracy</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">edaeea6f-a965-4459-b6a1-d5ec3631d690</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>accuracy</name>
+            <identifier class="java.lang.String">86e82bfe-7adc-457a-8e3d-459c01a68abc</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>creaturetemplate</name>
+              <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>akrasia</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>akrasia</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">10</value>
+          </entry>
+          <entry>
+            <key>unsigned</key>
+            <value class="java.lang.String">UNSIGNED</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.mysql.MySQLDatabaseImpl</providerClass>
+          <typeName>INT</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>accuracy</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>creaturetemplate</name>
+                  <schemaName>akrasia</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <default class="java.lang.String">1</default>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>accuracy</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>creaturetemplate</name>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>speed</name>
+        <identifier class="java.lang.String">ad78a32a-bc66-429f-8391-3cc9c6e98faa</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>creaturetemplate</name>
+          <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+          <schemaName>akrasia</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>akrasia</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>speed</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">19aea861-3fc1-4e02-b93e-17c6af37127c</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>speed</name>
+            <identifier class="java.lang.String">ad78a32a-bc66-429f-8391-3cc9c6e98faa</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>creaturetemplate</name>
+              <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>akrasia</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>akrasia</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">10</value>
+          </entry>
+          <entry>
+            <key>unsigned</key>
+            <value class="java.lang.String">UNSIGNED</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.mysql.MySQLDatabaseImpl</providerClass>
+          <typeName>INT</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>speed</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>creaturetemplate</name>
+                  <schemaName>akrasia</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <default class="java.lang.String">1</default>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>speed</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>creaturetemplate</name>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>descriptionshort</name>
+        <identifier class="java.lang.String">037fd3e4-f224-4263-a118-602f5a503e5a</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>creaturetemplate</name>
+          <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+          <schemaName>akrasia</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>akrasia</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>descriptionshort</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">bcf5220c-2dfc-497c-bb9d-35fd9a53209b</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>descriptionshort</name>
+            <identifier class="java.lang.String">037fd3e4-f224-4263-a118-602f5a503e5a</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>creaturetemplate</name>
+              <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>akrasia</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>akrasia</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.mysql.MySQLDatabaseImpl</providerClass>
+          <typeName>TEXT</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>descriptionshort</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>creaturetemplate</name>
+                  <schemaName>akrasia</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>descriptionshort</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>creaturetemplate</name>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>descriptionlong</name>
+        <identifier class="java.lang.String">e73d1370-0f8e-42aa-b75c-efda93415ff0</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>creaturetemplate</name>
+          <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+          <schemaName>akrasia</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>akrasia</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>descriptionlong</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">bd02336e-cafe-495e-92dc-0fc76ab3408f</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>descriptionlong</name>
+            <identifier class="java.lang.String">e73d1370-0f8e-42aa-b75c-efda93415ff0</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>creaturetemplate</name>
+              <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>akrasia</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>akrasia</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.mysql.MySQLDatabaseImpl</providerClass>
+          <typeName>TEXT</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>descriptionlong</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>creaturetemplate</name>
+                  <schemaName>akrasia</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>descriptionlong</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>creaturetemplate</name>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>AI</name>
+        <identifier class="java.lang.String">f7548bc9-0c30-43c7-b0ab-3c2a9496cbf5</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>creaturetemplate</name>
+          <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+          <schemaName>akrasia</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>akrasia</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>AI</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">a9507dd5-b4c7-4d7a-94d8-fe2035a70995</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>AI</name>
+            <identifier class="java.lang.String">f7548bc9-0c30-43c7-b0ab-3c2a9496cbf5</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>creaturetemplate</name>
+              <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>akrasia</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>akrasia</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">10</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.mysql.MySQLDatabaseImpl</providerClass>
+          <typeName>INT</typeName>
+        </dataTypeID>
+        <properties>
+          <entry>
+            <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+            <value class="oracle.javatools.db.ReferenceID">
+              <parent class="oracle.javatools.db.ReferenceID">
+                <name>AI</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>creaturetemplate</name>
+                  <schemaName>akrasia</schemaName>
+                  <type>TABLE</type>
+                </parent>
+                <type>COLUMN</type>
+              </parent>
+              <type>DataTypeUsage</type>
+            </value>
+          </entry>
+        </properties>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>AI</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>creaturetemplate</name>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>PRIMARY</name>
+        <identifier class="java.lang.String">b204d0db-0617-497f-98e0-6d592de667c8</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>creaturetemplate</name>
+          <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+          <schemaName>akrasia</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>akrasia</schemaName>
+        <type>CONSTRAINT</type>
+      </ID>
+      <name>PRIMARY</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>entry</name>
+          <identifier class="java.lang.String">6e35c63c-5b0d-421c-931b-88130e0d87c7</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>creaturetemplate</name>
+            <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
+            <schemaName>akrasia</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>akrasia</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PRIMARY</name>
+            <childObjectNames>
+              <childObjectName>entry</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>creaturetemplate</name>
+              <schemaName>akrasia</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>PKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+  </constraints>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</key>
+      <value class="java.lang.String">Akrasia</value>
+    </entry>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>creaturetemplate</name>
+        <schemaName>akrasia</schemaName>
+        <type>TABLE</type>
+      </value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <ID class="oracle.javatools.db.IdentifierBasedID">
+      <name>akrasia</name>
+      <identifier class="java.lang.String">ffda35af-6525-4578-bf1f-d73f3968284c</identifier>
+      <schemaName>akrasia</schemaName>
+      <type>SCHEMA</type>
+    </ID>
+    <name>akrasia</name>
+  </schema>
+</table>

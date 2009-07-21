@@ -28,13 +28,6 @@
    </database>
    <sequencing>
       <preallocation-size>50</preallocation-size>
-      <name-column-handle>
-         <column-table-name>akrasia.dungeonlevel</column-table-name>
-         <column-name>entry</column-name>
-      </name-column-handle>
-      <table-handle>
-         <table-name>akrasia.dungeonlevel</table-name>
-      </table-handle>
    </sequencing>
    <table-generation>
       <default-primary-key-name>entry</default-primary-key-name>

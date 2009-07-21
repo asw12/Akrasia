@@ -2,7 +2,7 @@
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1111/offlinedb">
   <ID class="oracle.javatools.db.IdentifierBasedID">
     <name>dungeonlevel</name>
-    <identifier class="java.lang.String">419c3b78-a3d1-49eb-a99e-8215ac9c6450</identifier>
+    <identifier class="java.lang.String">85ce41d1-fee4-4bb4-9b22-f949ec558ee7</identifier>
     <schemaName>akrasia</schemaName>
     <type>TABLE</type>
   </ID>
@@ -11,10 +11,10 @@
     <column>
       <ID class="oracle.javatools.db.IdentifierBasedID">
         <name>entry</name>
-        <identifier class="java.lang.String">f825da9d-8e00-4d51-a543-e34a487e30be</identifier>
+        <identifier class="java.lang.String">9e20c6af-705f-41c5-b971-e7ae9fa6d792</identifier>
         <parent class="oracle.javatools.db.IdentifierBasedID">
           <name>dungeonlevel</name>
-          <identifier class="java.lang.String">419c3b78-a3d1-49eb-a99e-8215ac9c6450</identifier>
+          <identifier class="java.lang.String">85ce41d1-fee4-4bb4-9b22-f949ec558ee7</identifier>
           <schemaName>akrasia</schemaName>
           <type>TABLE</type>
         </parent>
@@ -24,13 +24,13 @@
       <name>entry</name>
       <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
         <ID class="oracle.javatools.db.IdentifierBasedID">
-          <identifier class="java.lang.String">dcd99e60-866c-48cc-8d03-8df65c72e973</identifier>
+          <identifier class="java.lang.String">974f727e-802f-4cae-a490-4fef3922aee9</identifier>
           <parent class="oracle.javatools.db.IdentifierBasedID">
             <name>entry</name>
-            <identifier class="java.lang.String">f825da9d-8e00-4d51-a543-e34a487e30be</identifier>
+            <identifier class="java.lang.String">9e20c6af-705f-41c5-b971-e7ae9fa6d792</identifier>
             <parent class="oracle.javatools.db.IdentifierBasedID">
               <name>dungeonlevel</name>
-              <identifier class="java.lang.String">419c3b78-a3d1-49eb-a99e-8215ac9c6450</identifier>
+              <identifier class="java.lang.String">85ce41d1-fee4-4bb4-9b22-f949ec558ee7</identifier>
               <schemaName>akrasia</schemaName>
               <type>TABLE</type>
             </parent>
@@ -91,10 +91,10 @@
     <column>
       <ID class="oracle.javatools.db.IdentifierBasedID">
         <name>environment</name>
-        <identifier class="java.lang.String">4096f89e-ddf8-4dfa-8640-29ce71495552</identifier>
+        <identifier class="java.lang.String">1fbcd294-446d-4d2a-b3e5-56e5295ebdd6</identifier>
         <parent class="oracle.javatools.db.IdentifierBasedID">
           <name>dungeonlevel</name>
-          <identifier class="java.lang.String">419c3b78-a3d1-49eb-a99e-8215ac9c6450</identifier>
+          <identifier class="java.lang.String">85ce41d1-fee4-4bb4-9b22-f949ec558ee7</identifier>
           <schemaName>akrasia</schemaName>
           <type>TABLE</type>
         </parent>
@@ -104,13 +104,13 @@
       <name>environment</name>
       <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
         <ID class="oracle.javatools.db.IdentifierBasedID">
-          <identifier class="java.lang.String">a287657a-78f6-4c06-ba51-7dc661399821</identifier>
+          <identifier class="java.lang.String">296669e4-c0eb-40c5-a808-089e922acedd</identifier>
           <parent class="oracle.javatools.db.IdentifierBasedID">
             <name>environment</name>
-            <identifier class="java.lang.String">4096f89e-ddf8-4dfa-8640-29ce71495552</identifier>
+            <identifier class="java.lang.String">1fbcd294-446d-4d2a-b3e5-56e5295ebdd6</identifier>
             <parent class="oracle.javatools.db.IdentifierBasedID">
               <name>dungeonlevel</name>
-              <identifier class="java.lang.String">419c3b78-a3d1-49eb-a99e-8215ac9c6450</identifier>
+              <identifier class="java.lang.String">85ce41d1-fee4-4bb4-9b22-f949ec558ee7</identifier>
               <schemaName>akrasia</schemaName>
               <type>TABLE</type>
             </parent>
@@ -120,9 +120,15 @@
           <schemaName>akrasia</schemaName>
           <type>DataTypeUsage</type>
         </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">10</value>
+          </entry>
+        </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <providerClass>oracle.javatools.db.mysql.MySQLDatabaseImpl</providerClass>
-          <typeName>ENUM</typeName>
+          <typeName>INT</typeName>
         </dataTypeID>
         <properties>
           <entry>
@@ -163,10 +169,10 @@
     <constraint class="oracle.javatools.db.PKConstraint">
       <ID class="oracle.javatools.db.IdentifierBasedID">
         <name>PRIMARY</name>
-        <identifier class="java.lang.String">810a644f-1ad3-463e-ab59-bb77383f614e</identifier>
+        <identifier class="java.lang.String">5bb3ef9e-8ca1-426d-b904-9ef195a44cb9</identifier>
         <parent class="oracle.javatools.db.IdentifierBasedID">
           <name>dungeonlevel</name>
-          <identifier class="java.lang.String">419c3b78-a3d1-49eb-a99e-8215ac9c6450</identifier>
+          <identifier class="java.lang.String">85ce41d1-fee4-4bb4-9b22-f949ec558ee7</identifier>
           <schemaName>akrasia</schemaName>
           <type>TABLE</type>
         </parent>
@@ -177,10 +183,10 @@
       <columnIDs>
         <columnID class="oracle.javatools.db.IdentifierBasedID">
           <name>entry</name>
-          <identifier class="java.lang.String">f825da9d-8e00-4d51-a543-e34a487e30be</identifier>
+          <identifier class="java.lang.String">9e20c6af-705f-41c5-b971-e7ae9fa6d792</identifier>
           <parent class="oracle.javatools.db.IdentifierBasedID">
             <name>dungeonlevel</name>
-            <identifier class="java.lang.String">419c3b78-a3d1-49eb-a99e-8215ac9c6450</identifier>
+            <identifier class="java.lang.String">85ce41d1-fee4-4bb4-9b22-f949ec558ee7</identifier>
             <schemaName>akrasia</schemaName>
             <type>TABLE</type>
           </parent>
@@ -216,9 +222,8 @@
     </entry>
     <entry>
       <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
-      <value class="oracle.javatools.db.IdentifierBasedID">
+      <value class="oracle.javatools.db.ReferenceID">
         <name>dungeonlevel</name>
-        <identifier class="java.lang.String">419c3b78-a3d1-49eb-a99e-8215ac9c6450</identifier>
         <schemaName>akrasia</schemaName>
         <type>TABLE</type>
       </value>
@@ -231,7 +236,7 @@
   <schema>
     <ID class="oracle.javatools.db.IdentifierBasedID">
       <name>akrasia</name>
-      <identifier class="java.lang.String">1fa85b78-9f1c-4a22-aeb2-9241afdaeb67</identifier>
+      <identifier class="java.lang.String">ffda35af-6525-4578-bf1f-d73f3968284c</identifier>
       <schemaName>akrasia</schemaName>
       <type>SCHEMA</type>
     </ID>

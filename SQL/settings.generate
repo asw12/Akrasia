@@ -1,0 +1,34 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TransferDescriptor xmlns="http://xmlns.oracle.com/jdeveloper/110000transfer-descriptor">
+   <value n="cascadeDelete" v="false"/>
+   <value n="dependencyDepth" v="0"/>
+   <value n="includeAllDependencies" v="false"/>
+   <value n="includeDependencies" v="false"/>
+   <value n="manualReconcile" v="false"/>
+   <value n="policy" v="oracle.jdevimpl.offlinedb.transfer.OffToOnPolicy"/>
+   <value n="reconcile" v="false"/>
+   <value n="replace" v="false"/>
+   <value n="schemaNames" v="false"/>
+   <list n="schemaObjectDescriptors">
+      <hash>
+         <value n="name" v="creaturetemplate"/>
+         <value n="schemaName" v="akrasia"/>
+         <value n="type" v="TABLE"/>
+      </hash>
+      <hash>
+         <value n="name" v="dungeonlevel"/>
+         <value n="schemaName" v="akrasia"/>
+         <value n="type" v="TABLE"/>
+      </hash>
+   </list>
+   <value n="sourceIdentifier" v="Akrasia"/>
+   <value n="spoolCommands" v="false"/>
+   <url n="sqlFile" path="Akrasia.sql"/>
+   <value n="sqlPlus" v="false"/>
+   <url n="targetIdentifier" path="../database/Akrasia/Akrasia.offlinedb"/>
+   <hash n="targets">
+      <hash n="oracle.ideimpl.db.transfer.DDLTransferTarget"/>
+   </hash>
+   <value n="targetSchemaName" v="akrasia"/>
+   <value n="targetTableSpace"/>
+</TransferDescriptor>
