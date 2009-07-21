@@ -34,16 +34,17 @@ public class Settings {
             props = new Properties();
             try{
                 props.load(new BufferedReader(new FileReader("Akrasia.properties")));
+                loaded = true;
             }
             catch(FileNotFoundException e){
                 // Create the new file
                 props.setProperty("DBTableName", Settings.DBTableNameDefault);
                 props.setProperty("DBUser", Settings.DBUserDefault);
                 props.setProperty("DBPassword", Settings.DBPasswordDefault);
-                
+                loaded = true;
                 try{
                     props.store(new BufferedWriter(new FileWriter("Akrasia.properties")), "Akrasia Server Side Properties \n Generated at:");
-                } catch (IOException e2) { }
+                } catch (IOException e2) { e2.printStackTrace(); }
             }
             catch(IOException e){
                 e.printStackTrace();
