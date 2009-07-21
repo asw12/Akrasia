@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<project type="relational">
+   <name>AkrasiaTopLinkMap</name>
+   <product-version>11.1.1.0.31.51.56</product-version>
+   <schema-version>7.0</schema-version>
+   <defaults-policy type="relational">
+      <use-method-accessing>false</use-method-accessing>
+      <caching-policy>
+         <cache-expiry/>
+      </caching-policy>
+      <cache-all-statements>false</cache-all-statements>
+      <bind-all-parameters>true</bind-all-parameters>
+   </defaults-policy>
+   <ejb-policy>
+      <ejb-persistence-type>No EJB</ejb-persistence-type>
+   </ejb-policy>
+   <deployment-xml-path>META-INF/</deployment-xml-path>
+   <database>
+      <platform-name>Oracle</platform-name>
+      <deployment-login>
+         <driver-class>com.mysql.jdbc.Driver</driver-class>
+         <url>jdbc:mysql://localhost:3306/akrasia</url>
+         <user-name>akrasia</user-name>
+         <password>77F9BCD65FABB4501B550455987A268F</password>
+         <save-password>true</save-password>
+      </deployment-login>
+   </database>
+   <sequencing>
+      <preallocation-size>50</preallocation-size>
+   </sequencing>
+   <table-generation>
+      <default-primary-key-name>entry</default-primary-key-name>
+      <primary-key-search-pattern>*entry</primary-key-search-pattern>
+   </table-generation>
+</project>
