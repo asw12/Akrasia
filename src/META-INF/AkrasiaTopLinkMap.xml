@@ -5,12 +5,6 @@
       <toplink:platform-class>oracle.toplink.platform.database.MySQL4Platform</toplink:platform-class>
       <toplink:user-name>akrasia</toplink:user-name>
       <toplink:password>77F9BCD65FABB4501B550455987A268F</toplink:password>
-      <toplink:sequencing>
-         <toplink:default-sequence xsi:type="toplink:table-sequence">
-            <toplink:table>akrasia.dungeonlevel</toplink:table>
-            <toplink:name-field>entry</toplink:name-field>
-         </toplink:default-sequence>
-      </toplink:sequencing>
       <toplink:driver-class>com.mysql.jdbc.Driver</toplink:driver-class>
       <toplink:connection-url>jdbc:mysql://localhost:3306/akrasia</toplink:connection-url>
    </toplink:login>

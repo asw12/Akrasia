@@ -4,7 +4,7 @@ import akrasia.network.*;
 import akrasia.Constant;
 import akrasia.environment.DisplayedMap;
 import akrasia.thing.Thing;
-import akrasia.thing.Unit.Unit;
+import akrasia.thing.unit.Unit;
 
 import java.awt.Color;
 import java.awt.Dimension;

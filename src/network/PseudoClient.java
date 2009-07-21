@@ -1,7 +1,7 @@
 package akrasia.network;
 
-import akrasia.thing.Unit.Player;
-import akrasia.thing.Unit.Unit;
+import akrasia.thing.unit.Player;
+import akrasia.thing.unit.Unit;
 
 /**
  * This is the version of clients that the Server keeps track of.

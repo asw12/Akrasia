@@ -9,9 +9,9 @@ import akrasia.graphics.GUI;
 import akrasia.graphics.SimpleGUI;
 
 import akrasia.thing.Thing;
-import akrasia.thing.Unit.Mob;
-import akrasia.thing.Unit.Player;
-import akrasia.thing.Unit.Unit;
+import akrasia.thing.unit.Mob;
+import akrasia.thing.unit.Player;
+import akrasia.thing.unit.Unit;
 
 import java.awt.Point;
 

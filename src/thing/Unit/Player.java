@@ -1,4 +1,4 @@
-package akrasia.thing.Unit;
+package akrasia.thing.unit;
 
 import akrasia.Constant;
 

@@ -2,8 +2,8 @@ package akrasia.environment;
 
 import akrasia.thing.Thing;
 
-import akrasia.thing.Unit.Mob;
-import akrasia.thing.Unit.Unit;
+import akrasia.thing.unit.Mob;
+import akrasia.thing.unit.Unit;
 
 import java.awt.Point;
 
