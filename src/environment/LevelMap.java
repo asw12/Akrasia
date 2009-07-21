@@ -20,7 +20,7 @@ public class LevelMap implements Map{
         activeMobsHash = new HashSet<Mob>();
         
         // Generate random room
-        (new LevelGenerator(this)).RectangularRoomTest(0, 0, 10, 10);
+        (new LevelGenerator(this)).RectangularRoomTest(10, 10, 10, 10);
     }
     
     public TreeMap<Long, List<Mob>> activeMobs;

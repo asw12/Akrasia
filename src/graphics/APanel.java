@@ -82,7 +82,7 @@ public class APanel extends JPanel {
         }
         
         if(gui.cursor != null){
-            Point p = (Point)gui.client.map.GetLocationOfThing(gui.client.map.GetUnits().get(0)).clone(); //TODO: add real unit ref
+            Point p = (Point)gui.client.map.GetLocationOfThing(gui.client.map.GetUnits().get(1)).clone(); //TODO: add real unit ref
             if(!circletest){
                 if(gui.cursorover != null){
                     BresenhamLineDraw(g2, p.x, gui.cursor.x, p.y, gui.cursor.y, 200, 100, 100, 100, 255);

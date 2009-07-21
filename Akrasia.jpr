@@ -210,7 +210,7 @@
          <hash n="Default">
             <value n="custom" v="false"/>
             <value n="name" v="Default"/>
-            <url n="targetURL" path="src/graphics/SimpleGUI.java"/>
+            <url n="targetURL" path="src/save/Database.java"/>
             <value n="VMName" v="server"/>
          </hash>
       </hash>
@@ -219,7 +219,12 @@
       </list>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
-      <list n="exportedReferences"/>
+      <list n="exportedReferences">
+         <hash>
+            <value n="id" v="Mysql-connector-java-5.1.8-bin.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+      </list>
       <hash n="internalDefinitions">
          <list n="jdkDefinitions">
             <hash>
@@ -242,14 +247,29 @@
                <value n="version" v="1.6.0_12-ea"/>
             </hash>
          </list>
-         <list n="libraryDefinitions"/>
+         <list n="libraryDefinitions">
+            <hash>
+               <list n="classPath">
+                  <url path="../../../../../Program Files/Java/jdk1.6.0_12/jre/lib/ext/mysql-connector-java-5.1.8/mysql-connector-java-5.1.8-bin.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Mysql-connector-java-5.1.8-bin.jar"/>
+               <value n="id" v="Mysql-connector-java-5.1.8-bin.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+         </list>
       </hash>
       <hash n="jdkReference">
          <url n="id" path="../1.6.0_12.jdk"/>
          <value n="isJDK" v="true"/>
          <value n="jdkVersion" v="1.6.0_12"/>
       </hash>
-      <list n="libraryReferences"/>
+      <list n="libraryReferences">
+         <hash>
+            <value n="id" v="Mysql-connector-java-5.1.8-bin.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+      </list>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectPaths">
       <url n="outputDirectory" path="classes/"/>

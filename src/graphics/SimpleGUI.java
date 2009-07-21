@@ -50,7 +50,7 @@ import javax.swing.WindowConstants;
 import sun.awt.Graphics2Delegate;
 
 public class SimpleGUI extends GUI{
-    public static void main(String[] args){            
+    public static void main(String[] args) {
         /*
          * 1) Starts with a SimpleGUI
          * 2) SimpleGUI joins server
