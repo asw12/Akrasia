@@ -19,40 +19,34 @@ public class Database {
     public static void main(String[] args){
         Database adb = new Database();
         
-        if(args[0] == "reinitialize") {
+        if(args.length > 0 && args[0] == "reinitialize") {
             adb.Armageddon();
+        }
+        
+        ResultSet rs = adb.ExecuteStatement("SELECT * FROM `dungeonlevel`;");
+        try{
+            while(rs.next()){
+                System.out.println(rs.getInt(1));
+            }
+        }
+        catch(NullPointerException e){
+            e.printStackTrace();
+        }
+        catch(Exception e){
+            e.printStackTrace();
         }
     }
     
     public Database() {
-        props = new Properties();
-        
-        try{
-            props.load(new BufferedReader(new FileReader("Akrasia.properties")));
-        }
-        catch(FileNotFoundException e){
-            // Create the new file
-            props.setProperty("DBTableName", Settings.DBTableNameDefault);
-            props.setProperty("DBUser", Settings.DBUserDefault);
-            props.setProperty("DBPassword", Settings.DBPasswordDefault);
-            
-            try{
-                props.store(new BufferedWriter(new FileWriter("Akrasia.properties")), "Akrasia Server Side Properties \n Generated at:");
-            } catch (IOException e2) { }
-        }
-        catch(IOException e){
-            e.printStackTrace();
-        }
-        
         try{
             MysqlConnectionPoolDataSource dataSource = new MysqlConnectionPoolDataSource();
             // Localhost should probably always be the server
             dataSource.setServerName("localhost");
             dataSource.setPort(3306);
             
-            dataSource.setDatabaseName(props.getProperty("DBTableName"));
-            dataSource.setUser(props.getProperty("DBUser"));
-            dataSource.setPassword(props.getProperty("DBPassword"));
+            dataSource.setDatabaseName(Settings.getProperty("DBTableName"));
+            dataSource.setUser(Settings.getProperty("DBUser"));
+            dataSource.setPassword(Settings.getProperty("DBPassword"));
             
             ds = dataSource;
             
@@ -62,11 +56,11 @@ public class Database {
     }
     
     DataSource ds = null;
-    Properties props = null;
     
-    private void ExecuteStatement(String statement) {
+    private ResultSet ExecuteStatement(String statement) {
         Connection conn = null;
         Statement stmt = null;
+        ResultSet rs = null;
 
         try {
             conn = ds.getConnection();
@@ -79,9 +73,9 @@ public class Database {
         catch (SQLException e) {
             e.printStackTrace();
             System.err.println("Using settings: "
-                                + "\n\tTable: " + props.getProperty("DBTableName")
-                                + "\n\tUser: " + props.getProperty("DBUser")
-                                + "\n\tPassword: " + props.getProperty("DBPassword"));
+                                + "\n\tTable: " + Settings.getProperty("DBTableName")
+                                + "\n\tUser: " + Settings.getProperty("DBUser")
+                                + "\n\tPassword: " + Settings.getProperty("DBPassword"));
             // This is a fatal error
             System.exit(0);
         }
@@ -89,27 +83,30 @@ public class Database {
             e.printStackTrace();
         }
         finally {
-            /*
-             * close any jdbc instances here that weren't
-             * explicitly closed during normal code path, so
-             * that we don't 'leak' resources...
-             */
-
             if (stmt != null) {
                 try {
-                    stmt.close();
+                    rs = stmt.getResultSet();
+                    
+                    /*
+                     * Note: When a Statement object is 
+                     * closed, its current ResultSet object, if one exists, is 
+                     * also closed.  
+                     */
+                    //stmt.close();
                 } catch (SQLException sqlex) { }
 
                 stmt = null;
             }
 
             if (conn != null) {
-                try {
-                    conn.close();
-                } catch (SQLException sqlex) { }
+                /* try {
+                    // See above
+                    //conn.close();
+                } catch (SQLException sqlex) { } */
                 conn = null;
             }
         }
+        return rs;
     }
     
     /**
