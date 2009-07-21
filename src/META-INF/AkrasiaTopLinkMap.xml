@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<toplink:object-persistence version="Oracle TopLink - 11g (11.1.1.0.0) (Build 080909)" xmlns:opm="http://xmlns.oracle.com/ias/xsds/opm" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:toplink="http://xmlns.oracle.com/ias/xsds/toplink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <opm:name>AkrasiaTopLinkMap</opm:name>
+   <toplink:login xsi:type="toplink:database-login">
+      <toplink:platform-class>oracle.toplink.platform.database.MySQL4Platform</toplink:platform-class>
+      <toplink:user-name>akrasia</toplink:user-name>
+      <toplink:password>77F9BCD65FABB4501B550455987A268F</toplink:password>
+      <toplink:sequencing>
+         <toplink:default-sequence xsi:type="toplink:table-sequence">
+            <toplink:table>akrasia.dungeonlevel</toplink:table>
+            <toplink:name-field>entry</toplink:name-field>
+         </toplink:default-sequence>
+      </toplink:sequencing>
+      <toplink:driver-class>com.mysql.jdbc.Driver</toplink:driver-class>
+      <toplink:connection-url>jdbc:mysql://localhost:3306/akrasia</toplink:connection-url>
+   </toplink:login>
+</toplink:object-persistence>

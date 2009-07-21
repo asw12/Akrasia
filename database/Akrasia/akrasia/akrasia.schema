@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<schema xmlns="http://xmlns.oracle.com/jdeveloper/1111/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <name>akrasia</name>
+    <identifier class="java.lang.String">1fa85b78-9f1c-4a22-aeb2-9241afdaeb67</identifier>
+    <schemaName>akrasia</schemaName>
+    <type>SCHEMA</type>
+  </ID>
+  <name>akrasia</name>
+</schema>

@@ -81,6 +81,8 @@
          <string v="Swing/AWT"/>
          <string v="Java"/>
          <string v="XML"/>
+         <string v="Database"/>
+         <string v="TopLink"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
@@ -272,6 +274,14 @@
             <value n="id" v="Mysql-connector-java-5.1.8-bin.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="TopLink"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle XML Parser v2"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
       <hash n="internalDefinitions">
          <list n="jdkDefinitions">
@@ -317,6 +327,14 @@
             <value n="id" v="Mysql-connector-java-5.1.8-bin.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="TopLink"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle XML Parser v2"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectPaths">
@@ -336,6 +354,14 @@
          </list>
          <list n="url-path">
             <url path="toplink/"/>
+         </list>
+      </hash>
+      <hash n="toplink-map-list">
+         <list n="toplink-map">
+            <hash>
+               <value n="project-name" v="AkrasiaTopLinkMap"/>
+               <value n="project-path" v="AkrasiaTopLinkMap/AkrasiaTopLinkMap.mwp"/>
+            </hash>
          </list>
       </hash>
    </hash>

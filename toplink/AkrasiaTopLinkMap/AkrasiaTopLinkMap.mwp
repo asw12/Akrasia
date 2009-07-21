@@ -16,7 +16,7 @@
    </ejb-policy>
    <deployment-xml-path>META-INF/</deployment-xml-path>
    <database>
-      <platform-name>Oracle</platform-name>
+      <platform-name>MySQL4</platform-name>
       <deployment-login>
          <driver-class>com.mysql.jdbc.Driver</driver-class>
          <url>jdbc:mysql://localhost:3306/akrasia</url>
@@ -24,9 +24,17 @@
          <password>77F9BCD65FABB4501B550455987A268F</password>
          <save-password>true</save-password>
       </deployment-login>
+      <development-login>Akrasia</development-login>
    </database>
    <sequencing>
       <preallocation-size>50</preallocation-size>
+      <name-column-handle>
+         <column-table-name>akrasia.dungeonlevel</column-table-name>
+         <column-name>entry</column-name>
+      </name-column-handle>
+      <table-handle>
+         <table-name>akrasia.dungeonlevel</table-name>
+      </table-handle>
    </sequencing>
    <table-generation>
       <default-primary-key-name>entry</default-primary-key-name>
