@@ -222,8 +222,9 @@
     </entry>
     <entry>
       <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
-      <value class="oracle.javatools.db.ReferenceID">
+      <value class="oracle.javatools.db.IdentifierBasedID">
         <name>dungeonlevel</name>
+        <identifier class="java.lang.String">85ce41d1-fee4-4bb4-9b22-f949ec558ee7</identifier>
         <schemaName>akrasia</schemaName>
         <type>TABLE</type>
       </value>

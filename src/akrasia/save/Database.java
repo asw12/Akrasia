@@ -16,6 +16,8 @@ import javax.sql.*;
 import javax.naming.*;
 import java.util.*;
 
+import oracle.toplink.*;
+
 public class Database {
     public static void main(String[] args){
         Database adb = new Database();

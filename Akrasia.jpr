@@ -149,6 +149,12 @@
    </hash>
    <hash n="oracle.jdeveloper.runner.RunConfigurations">
       <hash n="runConfigurationDefinitions">
+         <hash n="DatabaseTest">
+            <value n="custom" v="false"/>
+            <value n="name" v="DatabaseTest"/>
+            <url n="targetURL" path="src/akrasia/save/Database.java"/>
+            <value n="VMName" v="server"/>
+         </hash>
          <hash n="Default">
             <value n="custom" v="false"/>
             <value n="name" v="Default"/>
@@ -157,6 +163,7 @@
          </hash>
       </hash>
       <list n="runConfigurationList">
+         <string v="DatabaseTest"/>
          <string v="Default"/>
       </list>
    </hash>
