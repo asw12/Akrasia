@@ -1,11 +1,105 @@
 <?xml version="1.0" encoding="Cp1252"?>
 <toplink:object-persistence version="Oracle TopLink - 11g (11.1.1.0.0) (Build 080909)" xmlns:opm="http://xmlns.oracle.com/ias/xsds/opm" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:toplink="http://xmlns.oracle.com/ias/xsds/toplink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <opm:name>AkrasiaTopLinkMap</opm:name>
+   <opm:class-mapping-descriptors>
+      <opm:class-mapping-descriptor xsi:type="toplink:relational-class-mapping-descriptor">
+         <opm:class>akrasia.thing.unit.Creature</opm:class>
+         <opm:alias>Creature</opm:alias>
+         <opm:primary-key>
+            <opm:field table="creaturetemplate" name="entry" xsi:type="opm:column"/>
+         </opm:primary-key>
+         <opm:inheritance xsi:type="toplink:inheritance-policy">
+            <toplink:read-subclasses-on-queries>false</toplink:read-subclasses-on-queries>
+         </opm:inheritance>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy">
+            <opm:queries>
+               <opm:query name="findAllCreature" xsi:type="toplink:read-all-query">
+                  <toplink:reference-class>akrasia.thing.unit.Creature</toplink:reference-class>
+                  <toplink:outer-join-subclasses>false</toplink:outer-join-subclasses>
+                  <toplink:container xsi:type="toplink:list-container-policy">
+                     <toplink:collection-type>java.util.Vector</toplink:collection-type>
+                  </toplink:container>
+               </opm:query>
+            </opm:queries>
+         </opm:querying>
+         <toplink:descriptor-type>independent</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:tables>
+            <toplink:table name="akrasia.creaturetemplate"/>
+         </toplink:tables>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:relational-class-mapping-descriptor">
+         <opm:class>akrasia.thing.unit.Mob</opm:class>
+         <opm:alias>Mob</opm:alias>
+         <opm:inheritance xsi:type="toplink:inheritance-policy">
+            <toplink:read-subclasses-on-queries>true</toplink:read-subclasses-on-queries>
+            <toplink:class-indicator-field name="CLASS_INDICATOR_FIELD" xsi:type="opm:column"/>
+         </opm:inheritance>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy">
+            <opm:queries>
+               <opm:query name="findAllMob" xsi:type="toplink:read-all-query">
+                  <toplink:reference-class>akrasia.thing.unit.Mob</toplink:reference-class>
+                  <toplink:outer-join-subclasses>false</toplink:outer-join-subclasses>
+                  <toplink:container xsi:type="toplink:list-container-policy">
+                     <toplink:collection-type>java.util.Vector</toplink:collection-type>
+                  </toplink:container>
+               </opm:query>
+            </opm:queries>
+         </opm:querying>
+         <toplink:descriptor-type>independent</toplink:descriptor-type>
+         <toplink:returning-policy/>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:relational-class-mapping-descriptor">
+         <opm:class>akrasia.thing.unit.Player</opm:class>
+         <opm:alias>Player</opm:alias>
+         <opm:inheritance xsi:type="toplink:inheritance-policy">
+            <toplink:read-subclasses-on-queries>true</toplink:read-subclasses-on-queries>
+            <toplink:class-indicator-field name="CLASS_INDICATOR_FIELD" xsi:type="opm:column"/>
+         </opm:inheritance>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy">
+            <opm:queries>
+               <opm:query name="findAllPlayer" xsi:type="toplink:read-all-query">
+                  <toplink:reference-class>akrasia.thing.unit.Player</toplink:reference-class>
+                  <toplink:outer-join-subclasses>false</toplink:outer-join-subclasses>
+                  <toplink:container xsi:type="toplink:list-container-policy">
+                     <toplink:collection-type>java.util.Vector</toplink:collection-type>
+                  </toplink:container>
+               </opm:query>
+            </opm:queries>
+         </opm:querying>
+         <toplink:descriptor-type>independent</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+      </opm:class-mapping-descriptor>
+      <opm:class-mapping-descriptor xsi:type="toplink:relational-class-mapping-descriptor">
+         <opm:class>akrasia.thing.unit.Unit</opm:class>
+         <opm:alias>Unit</opm:alias>
+         <opm:inheritance xsi:type="toplink:inheritance-policy">
+            <toplink:read-subclasses-on-queries>true</toplink:read-subclasses-on-queries>
+            <toplink:class-indicator-field name="CLASS_INDICATOR_FIELD" xsi:type="opm:column"/>
+         </opm:inheritance>
+         <opm:events xsi:type="toplink:event-policy"/>
+         <opm:querying xsi:type="toplink:query-policy"/>
+         <toplink:descriptor-type>aggregate</toplink:descriptor-type>
+         <toplink:instantiation/>
+         <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+      </opm:class-mapping-descriptor>
+   </opm:class-mapping-descriptors>
    <toplink:login xsi:type="toplink:database-login">
       <toplink:platform-class>oracle.toplink.platform.database.MySQL4Platform</toplink:platform-class>
       <toplink:user-name>akrasia</toplink:user-name>
       <toplink:password>77F9BCD65FABB4501B550455987A268F</toplink:password>
+      <toplink:sequencing>
+         <toplink:default-sequence xsi:type="toplink:native-sequence"/>
+      </toplink:sequencing>
       <toplink:driver-class>com.mysql.jdbc.Driver</toplink:driver-class>
       <toplink:connection-url>jdbc:mysql://localhost:3306/akrasia</toplink:connection-url>
+      <toplink:cache-all-statements>true</toplink:cache-all-statements>
    </toplink:login>
 </toplink:object-persistence>

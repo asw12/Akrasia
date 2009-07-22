@@ -21,11 +21,12 @@ public abstract class Unit extends Thing{
         }
     }
     
-    ///public int id = 0;
-    public int id;
-    public int[] stats = new int[Constant.STATS.values().length];
+    // redundant? an id field is already inherited from Thing.java
+    //int id;
     
     char c = '@';
+    
+    public int[] stats = new int[Constant.STATS.values().length];
     
     public char GetSymbol(){
         return c;

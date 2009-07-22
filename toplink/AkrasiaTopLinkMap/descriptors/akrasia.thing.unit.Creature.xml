@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<descriptor type="relational">
+   <name>akrasia.thing.unit.Creature</name>
+   <class-handle>
+      <type-name>akrasia.thing.unit.Creature</type-name>
+   </class-handle>
+   <transactional-policy type="relational">
+      <descriptor-alias>Creature</descriptor-alias>
+      <refresh-cache-policy/>
+      <caching-policy/>
+      <query-manager type="relational">
+         <query-list>
+            <query type="relational-read-all">
+               <name>findAllCreature</name>
+               <relational-options>
+                  <format type="expression">
+                     <main-compound-expression type="compound">
+                        <operator-type>AND</operator-type>
+                     </main-compound-expression>
+                  </format>
+               </relational-options>
+            </query>
+         </query-list>
+      </query-manager>
+      <locking-policy type="relational"/>
+      <primary-key-policy/>
+   </transactional-policy>
+   <inheritance-policy type="relational">
+      <class-indicator-policy type="relational-field">
+         <indicator-type>
+            <type-handle>
+               <type-name>java.lang.String</type-name>
+            </type-handle>
+         </indicator-type>
+         <class-indicator-values>
+            <class-indicator-value>
+               <descriptor-value-handle>
+                  <descriptor-name>akrasia.thing.unit.Creature</descriptor-name>
+               </descriptor-value-handle>
+            </class-indicator-value>
+         </class-indicator-values>
+      </class-indicator-policy>
+      <outer-join-all-subclasses>true</outer-join-all-subclasses>
+   </inheritance-policy>
+   <instantiation-policy>
+      <policy-type>Default constructor</policy-type>
+   </instantiation-policy>
+   <interface-alias-policy/>
+</descriptor>

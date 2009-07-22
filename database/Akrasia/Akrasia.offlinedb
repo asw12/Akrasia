@@ -5,4 +5,10 @@
    </hash>
    <value n="id" v="9fb466e8-0122-1000-8001-c0a80171c226"/>
    <value n="name" v="Akrasia"/>
+   <value n="offlineDBSchema" v="akrasia"/>
+   <hash n="oracle.jdeveloper.offlinedb.model.ProviderDefaultTemplateSettings">
+      <hash n="default-template-ids">
+         <value n="TABLE"/>
+      </hash>
+   </hash>
 </ProviderSettings>

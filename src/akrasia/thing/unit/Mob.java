@@ -21,6 +21,7 @@ public class Mob extends Unit{
         super(i);
     }
     
+    public int entry;
     ArrayList<Integer> players = new ArrayList<Integer>();
     static int ticks = 0;
     enum AITypes{
@@ -31,7 +32,7 @@ public class Mob extends Unit{
         Assist
     }
     
-    AITypes ai = AITypes.Default;
+    public AITypes ai = AITypes.Default;
     
     public void TickAI(Server server, LevelMap map){
         Point p = map.GetLocationOfThing(this);
