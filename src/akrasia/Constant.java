@@ -47,43 +47,43 @@ public class Constant {
      * Message Passing
      ****************/
     
-    public final byte RequiresThing =                      0x01;
-    public final byte RequiresThing2 =                     0x02;
-    public final byte RequiresDestination =                0x04;
-    public final byte RequiresString =                     0x08;
-    public final byte RequiresString2 =                    0x10;
-    public final byte RequiresOption =                     0x20;
-    public final byte RequiresOption2 =                    0x40;
+    public static final byte RequiresThing =                      0x01;
+    public static final byte RequiresThing2 =                     0x02;
+    public static final byte RequiresDestination =                0x04;
+    public static final byte RequiresString =                     0x08;
+    public static final byte RequiresString2 =                    0x10;
+    public static final byte RequiresOption =                     0x20;
+    public static final byte RequiresOption2 =                    0x40;
     
     public enum OPCODES{
         //client to server or both
-        MOVECARDINAL  {public byte getLogic(){return (byte)RequiresThing2 + RequiresOption;}},
-        MOVE          {public byte getLogic(){return (byte)RequiresThing2 + RequiresDestination;}},
-        START_CAST    {public byte getLogic(){return (byte)RequiresThing2 + RequiresOption;}}, 
-        STOP_CAST     {public byte getLogic(){return (byte)0;}}, 
-        TALK          {public byte getLogic(){return (byte)RequiresThing2 + RequiresThing;}},  
-        USEITEM       {public byte getLogic(){return (byte)RequiresOption;}}, 
-        USEGOBJECT    {public byte getLogic(){return (byte)RequiresThing;}}, 
-        EQUIP         {public byte getLogic(){return (byte)RequiresOption2 + RequiresOption;}}, //slot and item
-        UNEQUIP       {public byte getLogic(){return (byte)RequiresOption;}}, 
-        SKILL         {public byte getLogic(){return (byte)RequiresOption;}},
-        DROP          {public byte getLogic(){return (byte)RequiresOption;}},   
-        THROW         {public byte getLogic(){return (byte)RequiresOption + RequiresDestination;}},   
+        MOVECARDINAL  {public byte getLogic(){return RequiresThing2 + RequiresOption;}},
+        MOVE          {public byte getLogic(){return RequiresThing2 + RequiresDestination;}},
+        START_CAST    {public byte getLogic(){return RequiresThing2 + RequiresOption;}}, 
+        STOP_CAST     {public byte getLogic(){return 0;}}, 
+        TALK          {public byte getLogic(){return RequiresThing2 + RequiresThing;}},  
+        USEITEM       {public byte getLogic(){return RequiresOption;}}, 
+        USEGOBJECT    {public byte getLogic(){return RequiresThing;}}, 
+        EQUIP         {public byte getLogic(){return RequiresOption2 + RequiresOption;}}, //slot and item
+        UNEQUIP       {public byte getLogic(){return RequiresOption;}}, 
+        SKILL         {public byte getLogic(){return RequiresOption;}},
+        DROP          {public byte getLogic(){return RequiresOption;}},   
+        THROW         {public byte getLogic(){return RequiresOption + RequiresDestination;}},   
         
-        JOIN          {public byte getLogic(){return (byte)RequiresString + RequiresString2;}},
-        CHAT          {public byte getLogic(){return (byte)RequiresString;}},
+        JOIN          {public byte getLogic(){return RequiresString + RequiresString2;}},
+        CHAT          {public byte getLogic(){return RequiresString;}},
         
         //server to client
-        ACKNOWLEDGEJOIN {public byte getLogic(){return (byte)RequiresThing + RequiresDestination + RequiresOption;}},
+        ACKNOWLEDGEJOIN {public byte getLogic(){return RequiresThing + RequiresDestination + RequiresOption;}},
         CONFIRM         {public byte getLogic(){return 0;}},
-        REJECT          {public byte getLogic(){return (byte)RequiresString;}},
-        APPEAR          {public byte getLogic(){return (byte)RequiresThing + RequiresDestination + RequiresOption;}},
-        WALLAPPEAR      {public byte getLogic(){return (byte)RequiresThing + RequiresDestination;}},
-        UNITAPPEAR      {public byte getLogic(){return (byte)RequiresThing + RequiresDestination + RequiresOption;}},
-        REVEAL          {public byte getLogic(){return (byte)RequiresDestination + RequiresOption;}},
-        DISAPPEAR       {public byte getLogic(){return (byte)RequiresThing;}},
-        ADDSSTATUS      {public byte getLogic(){return 1;}}, 
-        REMOVESTATUS    {public byte getLogic(){return 1;}};
+        REJECT          {public byte getLogic(){return RequiresString;}},
+        APPEAR          {public byte getLogic(){return RequiresThing + RequiresDestination + RequiresOption;}},
+        WALLAPPEAR      {public byte getLogic(){return RequiresThing + RequiresDestination;}},
+        UNITAPPEAR      {public byte getLogic(){return RequiresThing + RequiresDestination + RequiresOption;}},
+        REVEAL          {public byte getLogic(){return RequiresDestination + RequiresOption;}},
+        DISAPPEAR       {public byte getLogic(){return RequiresThing;}},
+        ADDSSTATUS      {public byte getLogic(){return RequiresThing;}}, 
+        REMOVESTATUS    {public byte getLogic(){return RequiresThing;}};
          
         public abstract byte getLogic();
     };
@@ -109,6 +109,7 @@ public class Constant {
     public enum STATS{
         SIGHT(12, 20),
         RANGE(0, 9);
+        // should be handled by db?
         public int min;
         public int max;
         private STATS(int min, int max){
