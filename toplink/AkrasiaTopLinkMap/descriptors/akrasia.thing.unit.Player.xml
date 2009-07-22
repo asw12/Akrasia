@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<descriptor type="relational">
+   <name>akrasia.thing.unit.Player</name>
+   <class-handle>
+      <type-name>akrasia.thing.unit.Player</type-name>
+   </class-handle>
+   <transactional-policy type="relational">
+      <descriptor-alias>Player</descriptor-alias>
+      <refresh-cache-policy/>
+      <caching-policy/>
+      <query-manager type="relational">
+         <query-list>
+            <query type="relational-read-all">
+               <name>findAllAException</name>
+               <relational-options>
+                  <format type="expression">
+                     <main-compound-expression type="compound">
+                        <operator-type>AND</operator-type>
+                     </main-compound-expression>
+                  </format>
+               </relational-options>
+            </query>
+         </query-list>
+      </query-manager>
+      <locking-policy type="relational"/>
+      <primary-key-policy/>
+   </transactional-policy>
+</descriptor>
