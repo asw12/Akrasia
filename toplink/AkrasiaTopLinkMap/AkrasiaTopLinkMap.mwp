@@ -3,16 +3,12 @@
    <name>AkrasiaTopLinkMap</name>
    <product-version>11.1.1.0.31.51.56</product-version>
    <schema-version>7.0</schema-version>
-   <descriptor-names>
-      <descriptor-name>akrasia.thing.unit.Player</descriptor-name>
-      <descriptor-name>thing.unit.Creature</descriptor-name>
-   </descriptor-names>
    <defaults-policy type="relational">
       <use-method-accessing>false</use-method-accessing>
       <default-descriptor-policies>
          <policy-type>Inheritance</policy-type>
-         <policy-type>Interface Alias</policy-type>
          <policy-type>Instantiation</policy-type>
+         <policy-type>Interface Alias</policy-type>
       </default-descriptor-policies>
       <caching-policy>
          <cache-expiry/>

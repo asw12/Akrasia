@@ -43,6 +43,7 @@
       <string v="oracle.ide.model.ResourcePaths/resourcesContentSet"/>
       <string v="oracle.jdeveloper.offlinedb.model.OfflineDBProjectSettings/offlineDBContentSet"/>
       <string v="oracle.jdeveloper.model.J2eeSettings/webContentSet"/>
+      <string v="oracle.toplink.addin.TopLinkProjectSettings/toplinkContentSet"/>
       <string v="oracle.bm.commonIde.data.project.ModelerProjectSettings/modelersContentSet"/>
       <string v="oracle.tip.tools.ide.pm.addin.PMProjectSettings/Integration_Content"/>
       <string v="oracle.toplink.workbench.addin/toplinkContentSet"/>
@@ -78,11 +79,10 @@
    </hash>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
+         <string v="TopLink"/>
+         <string v="Database"/>
          <string v="Swing/AWT"/>
          <string v="Java"/>
-         <string v="XML"/>
-         <string v="Database"/>
-         <string v="TopLink"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
@@ -118,117 +118,10 @@
          <string v="-Xlint:-unchecked"/>
       </list>
    </hash>
-   <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
-      <hash n="profileDefinitions">
-         <hash n="Akrasia">
-            <hash n="archiveOptions">
-               <value n="hasManifest" v="true"/>
-               <value n="mainClass" v="akrasia.graphics.SimpleGUI"/>
-            </hash>
-            <hash n="fileGroups">
-               <list n="groups">
-                  <hash>
-                     <list n="contributors">
-                        <hash>
-                           <value n="type" v="2"/>
-                        </hash>
-                        <hash>
-                           <value n="type" v="7"/>
-                        </hash>
-                     </list>
-                     <value n="displayName" v="Project Output"/>
-                     <hash n="filters">
-                        <list n="rules">
-                           <hash>
-                              <value n="pattern" v="WEB-INF/temp/**"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v="WEB-INF/classes/jsp_servlet/**"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v="**/.svn/"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v="**/CVS/"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v="**/.ade_path"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v="**/.data/**"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v="**.cdi"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v="**.contrib"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v="**.keep"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v="**.rvi"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v=".jsps/"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v=".tags/"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v=".dtags/"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v="**/*.jht"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v="**/*.jjt"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v="**/*.jxt"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v="**"/>
-                           </hash>
-                        </list>
-                     </hash>
-                     <value n="internalName" v="project-output"/>
-                     <value n="type" v="1"/>
-                  </hash>
-               </list>
-            </hash>
-            <url n="jarURL" path="deploy/Akrasia.jar"/>
-            <value n="profileClass" v="oracle.jdeveloper.deploy.jar.ArchiveProfile"/>
-            <value n="profileName" v="Akrasia"/>
-         </hash>
-      </hash>
-      <list n="profileList">
-         <string v="Akrasia"/>
-      </list>
-   </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
+      <value n="j2eeWebAppName" v="Akrasia-Akrasia-webapp"/>
+      <value n="j2eeWebContextRoot" v="Akrasia-Akrasia-context-root"/>
       <hash n="webContentSet">
-         <list n="pattern-filters">
-            <string v="-WEB-INF/temp/"/>
-            <string v="-WEB-INF/classes/"/>
-            <string v="+**"/>
-         </list>
          <list n="url-path">
             <url path="public_html/"/>
          </list>
@@ -236,33 +129,12 @@
    </hash>
    <hash n="oracle.jdeveloper.model.PathsConfiguration">
       <hash n="javaContentSet">
-         <list n="constituent-sets">
-            <hash>
-               <list n="pattern-filters">
-                  <string v="+**"/>
-               </list>
-               <list n="url-path">
-                  <url path="src/"/>
-               </list>
-            </hash>
-            <hash>
-               <list n="pattern-filters">
-                  <string v="+**"/>
-               </list>
-               <list n="url-path">
-                  <url path="database/"/>
-               </list>
-            </hash>
-            <hash>
-               <list n="pattern-filters">
-                  <string v="+**"/>
-               </list>
-               <list n="url-path">
-                  <url path="toplink/"/>
-               </list>
-            </hash>
+         <list n="pattern-filters">
+            <string v="+**"/>
          </list>
-         <list n="url-path"/>
+         <list n="url-path">
+            <url path="src/"/>
+         </list>
       </hash>
    </hash>
    <hash n="oracle.jdeveloper.offlinedb.model.OfflineDBProjectSettings">
@@ -280,7 +152,7 @@
          <hash n="Default">
             <value n="custom" v="false"/>
             <value n="name" v="Default"/>
-            <url n="targetURL" path="src/save/Database.java"/>
+            <url n="targetURL" path="src/akrasia/graphics/SimpleGUI.java"/>
             <value n="VMName" v="server"/>
          </hash>
       </hash>
@@ -291,15 +163,15 @@
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
          <hash>
-            <value n="id" v="Mysql-connector-java-5.1.8-bin.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="TopLink"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
             <value n="id" v="Oracle XML Parser v2"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Mysql-connector-java-5.1.8-bin.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -344,15 +216,15 @@
       </hash>
       <list n="libraryReferences">
          <hash>
-            <value n="id" v="Mysql-connector-java-5.1.8-bin.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="TopLink"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
             <value n="id" v="Oracle XML Parser v2"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Mysql-connector-java-5.1.8-bin.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -364,6 +236,16 @@
       <hash n="Integration_Content">
          <list n="pattern-filters">
             <string v="+**"/>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.toplink.addin.TopLinkProjectSettings">
+      <hash n="toplinkContentSet">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="toplink/"/>
          </list>
       </hash>
    </hash>

@@ -14,7 +14,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.TreeMap;
 
-public class LevelMap implements Map{
+public class LevelMap implements AMap{
     public LevelMap() {
         activeMobs = new TreeMap<Long, List<Mob>>();
         activeMobsHash = new HashSet<Mob>();

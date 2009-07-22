@@ -1,6 +1,4 @@
-package thing.unit;
-
-import akrasia.thing.unit.Unit;
+package akrasia.thing.unit;
 
 public class Creature extends Unit {
     public Creature() {
