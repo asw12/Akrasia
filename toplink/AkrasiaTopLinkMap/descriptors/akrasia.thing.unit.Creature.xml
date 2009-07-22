@@ -20,30 +20,134 @@
                   </format>
                </relational-options>
             </query>
+            <query type="relational-read-object">
+               <name>selectTemplate</name>
+               <relational-options>
+                  <format type="sql"/>
+               </relational-options>
+            </query>
          </query-list>
       </query-manager>
       <locking-policy type="relational"/>
-      <primary-key-policy/>
+      <primary-key-policy>
+         <primary-key-handles>
+            <column-handle>
+               <column-table-name>akrasia.creatureinstance</column-table-name>
+               <column-name>id</column-name>
+            </column-handle>
+         </primary-key-handles>
+      </primary-key-policy>
    </transactional-policy>
-   <inheritance-policy type="relational">
-      <class-indicator-policy type="relational-field">
-         <indicator-type>
-            <type-handle>
-               <type-name>java.lang.String</type-name>
-            </type-handle>
-         </indicator-type>
-         <class-indicator-values>
-            <class-indicator-value>
-               <descriptor-value-handle>
-                  <descriptor-name>akrasia.thing.unit.Creature</descriptor-name>
-               </descriptor-value-handle>
-            </class-indicator-value>
-         </class-indicator-values>
-      </class-indicator-policy>
-      <outer-join-all-subclasses>true</outer-join-all-subclasses>
-   </inheritance-policy>
+   <mappings>
+      <mapping type="direct-to-field">
+         <name>ai</name>
+         <inherited>true</inherited>
+         <attribute-handle>
+            <attribute-declaring-type-name>akrasia.thing.unit.Mob</attribute-declaring-type-name>
+            <attribute-name>ai</attribute-name>
+         </attribute-handle>
+         <column-handle>
+            <column-table-name>akrasia.creaturetemplate</column-table-name>
+            <column-name>AI</column-name>
+         </column-handle>
+      </mapping>
+      <mapping type="direct-to-field">
+         <name>c</name>
+         <attribute-handle>
+            <attribute-declaring-type-name>akrasia.thing.unit.Creature</attribute-declaring-type-name>
+            <attribute-name>c</attribute-name>
+         </attribute-handle>
+         <column-handle>
+            <column-table-name>akrasia.creaturetemplate</column-table-name>
+            <column-name>char</column-name>
+         </column-handle>
+      </mapping>
+      <mapping type="direct-to-field">
+         <name>entry</name>
+         <inherited>true</inherited>
+         <attribute-handle>
+            <attribute-declaring-type-name>akrasia.thing.unit.Mob</attribute-declaring-type-name>
+            <attribute-name>entry</attribute-name>
+         </attribute-handle>
+         <column-handle>
+            <column-table-name>akrasia.creatureinstance</column-table-name>
+            <column-name>entry</column-name>
+         </column-handle>
+      </mapping>
+      <mapping type="direct-to-field">
+         <name>id</name>
+         <inherited>true</inherited>
+         <attribute-handle>
+            <attribute-declaring-type-name>akrasia.thing.Thing</attribute-declaring-type-name>
+            <attribute-name>id</attribute-name>
+         </attribute-handle>
+         <column-handle>
+            <column-table-name>akrasia.creatureinstance</column-table-name>
+            <column-name>id</column-name>
+         </column-handle>
+      </mapping>
+   </mappings>
+   <inherited-attribute-handles>
+      <attribute-handle>
+         <attribute-declaring-type-name>akrasia.thing.unit.Mob</attribute-declaring-type-name>
+         <attribute-name>ai</attribute-name>
+      </attribute-handle>
+      <attribute-handle>
+         <attribute-declaring-type-name>akrasia.thing.Thing</attribute-declaring-type-name>
+         <attribute-name>c</attribute-name>
+      </attribute-handle>
+      <attribute-handle>
+         <attribute-declaring-type-name>akrasia.thing.unit.Unit</attribute-declaring-type-name>
+         <attribute-name>c</attribute-name>
+      </attribute-handle>
+      <attribute-handle>
+         <attribute-declaring-type-name>akrasia.thing.unit.Unit</attribute-declaring-type-name>
+         <attribute-name>delay</attribute-name>
+      </attribute-handle>
+      <attribute-handle>
+         <attribute-declaring-type-name>akrasia.thing.unit.Mob</attribute-declaring-type-name>
+         <attribute-name>entry</attribute-name>
+      </attribute-handle>
+      <attribute-handle>
+         <attribute-declaring-type-name>akrasia.thing.Thing</attribute-declaring-type-name>
+         <attribute-name>id</attribute-name>
+      </attribute-handle>
+      <attribute-handle>
+         <attribute-declaring-type-name>akrasia.thing.unit.Mob</attribute-declaring-type-name>
+         <attribute-name>players</attribute-name>
+      </attribute-handle>
+      <attribute-handle>
+         <attribute-declaring-type-name>akrasia.thing.unit.Unit</attribute-declaring-type-name>
+         <attribute-name>stats</attribute-name>
+      </attribute-handle>
+      <attribute-handle>
+         <attribute-declaring-type-name>akrasia.thing.unit.Mob</attribute-declaring-type-name>
+         <attribute-name>ticks</attribute-name>
+      </attribute-handle>
+   </inherited-attribute-handles>
    <instantiation-policy>
       <policy-type>Default constructor</policy-type>
    </instantiation-policy>
-   <interface-alias-policy/>
+   <user-defined-query-keys>
+      <user-defined-query-key>
+         <name>entry</name>
+         <column-handle>
+            <column-table-name>akrasia.creatureinstance</column-table-name>
+            <column-name>entry</column-name>
+         </column-handle>
+      </user-defined-query-key>
+   </user-defined-query-keys>
+   <primary-table-handle>
+      <table-name>akrasia.creatureinstance</table-name>
+   </primary-table-handle>
+   <multi-table-info-policy>
+      <secondary-table-holders>
+         <table-holder>
+            <table-handle>
+               <table-name>akrasia.creaturetemplate</table-name>
+            </table-handle>
+            <primary-keys-have-same-name>false</primary-keys-have-same-name>
+         </table-holder>
+      </secondary-table-holders>
+   </multi-table-info-policy>
 </descriptor>

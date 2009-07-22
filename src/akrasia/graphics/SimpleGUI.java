@@ -196,7 +196,6 @@ public class SimpleGUI extends GUI{
                     
                     byte modifiers = (byte)(a & 0xf0);
                     int b = (moveKeys.get(0) & 0xf);
-                    //System.out.println(moveKeys.get(0) + " " + modifiers + " " + b);
                     switch(b){
                         case 7: MoveCardinal(Constant.DIRECTIONS.NORTHWEST, modifiers); break;
                         case 8: MoveCardinal(Constant.DIRECTIONS.NORTH, modifiers); break;

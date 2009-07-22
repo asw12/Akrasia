@@ -129,8 +129,6 @@ public class Client extends PseudoClient{
             opcode = Constant.OPCODES.values()[Integer.valueOf(strs[0])];
         }
         
-        // System.out.println("                       " + opcode.toString()); //TODO: DEBUG
-        
         switch(opcode){
             case APPEAR : RMSG_Appear(Integer.valueOf(strs[1]), Constant.StringToPoint(strs[2]), Integer.valueOf(strs[3])); break;
             case WALLAPPEAR : RMSG_WallAppear(Integer.valueOf(strs[1]), Constant.StringToPoint(strs[2])); break;
@@ -146,13 +144,9 @@ public class Client extends PseudoClient{
     }
     
     void SendMsg(Constant.OPCODES opcode, String[] options){
-        // System.out.println(opcode.toString()); //TODO: DEBUG
         outputMsgs.addLast(MakeMsg(opcode, options));
     }
-    //boolean ready = true;
-    /*void SendMsg(Constant.OPCODES opcode, String[] options, boolean checkFront){
-        SendMsg(opcode, options);
-    }*/
+
     private String MakeMsg(Constant.OPCODES opcode, String[] options){
         String s = String.valueOf(opcode.ordinal());
         int o = 0;

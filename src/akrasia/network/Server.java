@@ -117,9 +117,7 @@ public class Server extends Thread{
         clients.add(client);
         clientfloormaps.add(new HashMap<Point, Integer>());
     }
-    
-    
-    
+
     void ProcessMsg(int c, String str){            
         currentTime = System.currentTimeMillis();
         
@@ -190,7 +188,7 @@ public class Server extends Thread{
             if(map.LocationThings(p).length > 0){
                 Thing thing = map.LocationThings(p)[0];
                 if(thing instanceof Unit){
-                    System.out.println(System.currentTimeMillis() + "  " + ((Mob)thing).delay + " " + map.LocationThings(p).length);
+                    // System.out.println(System.currentTimeMillis() + "  " + ((Mob)thing).delay + " " + map.LocationThings(p).length);
                 }
             }
             SMSG_Reject(c, "can't move there");
@@ -207,14 +205,14 @@ public class Server extends Thread{
         
         map.AddUnit(clients.get(c).controlledUnit, p, c);
         SMSG_AcknowledgeJoin(clients.get(c).controlledUnit.id, new Mob(), p, c);
-        
-        for(int i = 0; i < 10; i++){
+
+        /*for(int i = 0; i < 10; i++){
             Point pp = new Point((int)(Math.random() * 40), (int)(Math.random() * 40));
             while(map.LocationThings(pp).length!=0){
                 pp = new Point((int)(Math.random() * 40), (int)(Math.random() * 40));
             }
             map.AddUnit(new Mob(1), pp, 10 + i);
-        }
+        }*/
                                                        
         Reveal(c);
     }
