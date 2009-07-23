@@ -32,8 +32,12 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
+import save.Database;
+
 public class Server extends Thread{
     public Server(int port) {
+        AkrasiaDB = new Database();
+        
         clients = new ArrayList<PseudoClient>();
         connections = new ArrayList<ServerClient>();
         clientfloormaps = new ArrayList<HashMap<Point, Integer>>();
@@ -62,7 +66,6 @@ public class Server extends Thread{
                         Socket newSocket;
                         newSocket = socket.accept();
                         if(newSocket != null){
-                            System.out.println("NEW CLIENT REQUEST");
                             ServerClient newServerClient = new ServerClient(newSocket, server, connections.size());
                             newServerClient.start();
                             connections.add(newServerClient);
@@ -89,7 +92,7 @@ public class Server extends Thread{
             }
         }
         
-        try{socket.close();} catch(Exception e){}
+        try{socket.close();} catch(Exception e){ e.printStackTrace(); }
         
         while(running){
                 Tick(System.currentTimeMillis());
@@ -106,6 +109,7 @@ public class Server extends Thread{
     boolean running;
         ServerSocket socket;
     
+    Database AkrasiaDB;
     ArrayList<ServerClient> connections;
         public ArrayList<PseudoClient> clients;
         ArrayList<HashMap<Point, Integer>> clientfloormaps;

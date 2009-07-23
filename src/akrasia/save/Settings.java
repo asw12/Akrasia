@@ -18,10 +18,8 @@ public class Settings {
     private static boolean loaded = false;
     private static Properties props = null;
     
-    // Database Settings ( //TODO: to be moved to a .properties file )
-    public final static String DBTableNameDefault = "akrasia";
-    public final static String DBUserDefault      = "akrasia";
-    public final static String DBPasswordDefault  = "admin";
+    // Database Settings
+    public static boolean UseRelationalDB = true;
 
     // Network Settings
 
@@ -38,9 +36,7 @@ public class Settings {
             }
             catch(FileNotFoundException e){
                 // Create the new file
-                props.setProperty("DBTableName", Settings.DBTableNameDefault);
-                props.setProperty("DBUser", Settings.DBUserDefault);
-                props.setProperty("DBPassword", Settings.DBPasswordDefault);
+                //props.setProperty("DBTableName", Settings.DBTableNameDefault);
                 loaded = true;
                 try{
                     props.store(new BufferedWriter(new FileWriter("Akrasia.properties")), "Akrasia Server Side Properties \n Generated at:");
