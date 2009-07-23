@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1111/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <name>TEMPLATE_TABLE</name>
+    <identifier class="java.lang.String">3f604fc0-6f6b-4015-955e-a6b429c14a92</identifier>
+    <schemaName>TEMPLATES</schemaName>
+    <type>TABLE</type>
+  </ID>
+  <name>TEMPLATE_TABLE</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>TEMPLATE_TABLE_ID</name>
+        <identifier class="java.lang.String">c6ca4f1d-014b-49c1-a9c3-cb14a9e54dd0</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>TEMPLATE_TABLE</name>
+          <identifier class="java.lang.String">3f604fc0-6f6b-4015-955e-a6b429c14a92</identifier>
+          <schemaName>TEMPLATES</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>TEMPLATES</schemaName>
+        <type>COLUMN</type>
+      </ID>
+      <name>TEMPLATE_TABLE_ID</name>
+      <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">a7c1d6e0-e6b0-4d10-a64e-832d51fafcb7</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>TEMPLATE_TABLE_ID</name>
+            <identifier class="java.lang.String">c6ca4f1d-014b-49c1-a9c3-cb14a9e54dd0</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>TEMPLATE_TABLE</name>
+              <identifier class="java.lang.String">3f604fc0-6f6b-4015-955e-a6b429c14a92</identifier>
+              <schemaName>TEMPLATES</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>TEMPLATES</schemaName>
+            <type>COLUMN</type>
+          </parent>
+          <schemaName>TEMPLATES</schemaName>
+          <type>DataTypeUsage</type>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">10</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.mysql.MySQLDatabaseImpl</providerClass>
+          <typeName>NUMERIC</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <name>TEMPLATE_TABLE_PK</name>
+        <identifier class="java.lang.String">d3d21a4a-8768-4305-8218-52db3340d74a</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>TEMPLATE_TABLE</name>
+          <identifier class="java.lang.String">3f604fc0-6f6b-4015-955e-a6b429c14a92</identifier>
+          <schemaName>TEMPLATES</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>TEMPLATES</schemaName>
+        <type>CONSTRAINT</type>
+      </ID>
+      <name>TEMPLATE_TABLE_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>TEMPLATE_TABLE_ID</name>
+          <identifier class="java.lang.String">c6ca4f1d-014b-49c1-a9c3-cb14a9e54dd0</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>TEMPLATE_TABLE</name>
+            <identifier class="java.lang.String">3f604fc0-6f6b-4015-955e-a6b429c14a92</identifier>
+            <schemaName>TEMPLATES</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>TEMPLATES</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+    </constraint>
+  </constraints>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <ID class="oracle.javatools.db.IdentifierBasedID">
+      <name>TEMPLATES</name>
+      <identifier class="java.lang.String">dd58146c-dfd7-4019-9e83-313314708f81</identifier>
+      <schemaName>TEMPLATES</schemaName>
+      <type>SCHEMA</type>
+    </ID>
+    <name>TEMPLATES</name>
+  </schema>
+</table>

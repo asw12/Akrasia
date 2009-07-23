@@ -2,7 +2,7 @@ package akrasia.thing.unit;
 
 public class Creature extends Mob {
     public Creature() {
-        System.out.println("asdf");
+        System.out.println("Hello World");
     }
     
     char c;

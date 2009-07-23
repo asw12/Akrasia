@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="Cp1252"?>
 <toplink-sessions version="11g (11.1.1.0.0)" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <session xsi:type="database-session">
-      <name>default</name>
-      <server-platform xsi:type="weblogic-10-platform"/>
+      <name>Akrasia</name>
       <primary-project xsi:type="xml">META-INF/AkrasiaTopLinkMap.xml</primary-project>
       <login xsi:type="database-login">
+         <platform-class>oracle.toplink.platform.database.MySQL4Platform</platform-class>
          <user-name>akrasia</user-name>
          <password>77F9BCD65FABB4501B550455987A268F</password>
          <sequencing>

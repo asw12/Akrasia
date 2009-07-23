@@ -11,12 +11,15 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import java.sql.*;
 import javax.sql.*;
 import javax.naming.*;
+import java.sql.*;
 import java.util.*;
 
-import oracle.toplink.*;
+import oracle.toplink.sessions.DatabaseSession;
+import oracle.toplink.sessions.UnitOfWork;
+import oracle.toplink.tools.sessionconfiguration.XMLSessionConfigLoader;
+import oracle.toplink.tools.sessionmanagement.SessionManager;
 
 public class Database {
     public static void main(String[] args){
@@ -26,10 +29,14 @@ public class Database {
             adb.Armageddon();
         }
         
-        ResultSet rs = adb.ExecuteStatement("SELECT * FROM `dungeonlevel`;");
+        XMLSessionConfigLoader loader = new XMLSessionConfigLoader(getSessionsXmlPath());
+        SessionManager mgr = oracle.toplink.tools.sessionmanagement.SessionManager.getManager();
+        DatabaseSession session = (DatabaseSession)mgr.getSession(loader, getSessionName(), Thread.currentThread().getContextClassLoader(), true, true);
+
+        /* ResultSet rs = adb.ExecuteStatement("SELECT * FROM `creatureinstance`;");
         try{
             while(rs.next()){
-                System.out.println(rs.getInt(1));
+                
             }
         }
         catch(NullPointerException e){
@@ -37,7 +44,7 @@ public class Database {
         }
         catch(Exception e){
             e.printStackTrace();
-        }
+        }*/      
     }
     
     public Database() {
@@ -146,5 +153,16 @@ public class Database {
         ExecuteStatement("DROP TABLE IF EXISTS `akrasia`.`dungeonlevel`;");
         
         InitializeDatabase();
+    }
+    
+    /**
+     * Retrieves the String of the location of the sessions settings.
+     * @return String
+     */
+    protected static String getSessionsXmlPath() {
+            return "META-INF/sessions.xml";
+    }
+    protected static String getSessionName() {
+            return "Akrasia";
     }
 }

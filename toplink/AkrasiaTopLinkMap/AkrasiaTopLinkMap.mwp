@@ -5,7 +5,6 @@
    <schema-version>7.0</schema-version>
    <descriptor-names>
       <descriptor-name>akrasia.thing.unit.Creature</descriptor-name>
-      <descriptor-name>akrasia.thing.unit.Player</descriptor-name>
    </descriptor-names>
    <defaults-policy type="relational">
       <use-method-accessing>false</use-method-accessing>
