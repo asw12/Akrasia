@@ -7,7 +7,8 @@ public class Thing {
         this.id = id;
     }
 
-    
+    private int map;
+
     public int id = -1;
     
     char c; //0x002E;

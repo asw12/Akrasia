@@ -6,6 +6,8 @@ import akrasia.environment.LevelMap;
 
 import akrasia.environment.RayCastFOV;
 
+import akrasia.graphics.SimpleGUI;
+
 import akrasia.thing.Thing;
 
 import akrasia.thing.unit.Mob;
@@ -21,6 +23,7 @@ import java.io.InputStreamReader;
 
 import java.io.OutputStreamWriter;
 
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -35,6 +38,33 @@ import java.util.List;
 import save.Database;
 
 public class Server extends Thread{
+    public static void main(String[] args) {
+        /*
+         * 1) Starts with a SimpleGUI
+         * 2) SimpleGUI joins server
+         * 3) SimpleGUI changed to in-game mode
+         */
+        
+        SimpleGUI simple = new SimpleGUI();
+        simple.AddClient(new Client(simple));
+    
+        // Uncomment to run two servers       
+        SimpleGUI simple2 = new SimpleGUI();
+        simple2.AddClient(new Client(simple2)); // */
+        
+        Server server = new Server(6112);
+        
+        // Blank window will appear if no server can be found
+        try{
+            simple.client.JoinServer(InetAddress.getByName("67.180.54.71"), 6112);
+            
+            simple2.client.JoinServer(InetAddress.getByName("67.180.54.71"), 6112);
+        }
+        catch(Exception e){
+            e.printStackTrace(); 
+        }
+    }
+    
     public Server(int port) {
         AkrasiaDB = new Database();
         
@@ -318,6 +348,8 @@ public class Server extends Thread{
         }
         SMSG_Reveal(c, p, radius);
     }
+    
+    // TODO: this should not be here
     public void CreateWall(Point p, Constant.STRUCT.WALL wall){
         map.FloorTiles.put(p, -wall.ordinal() - 1);
         //SMSG_WallAppear(c, Constant.STRUCT.WALL.ROCK.ordinal(), p);
