@@ -18,21 +18,21 @@ public interface AMap {
     public HashMap<Integer, Thing> IDThing = new HashMap<Integer, Thing>();
     public HashMap<Unit, Integer> UnitID = new HashMap<Unit, Integer>();
     public HashMap<Thing, Integer> ThingID = new HashMap<Thing, Integer>();
-    
+
     public boolean MoveThing(Thing thing, Point point);
-    
+
     public boolean CanMove(Unit unit, Point point);
-    
+
     public boolean AddThing(Thing thing, Point point, int thingid);
-    
+
     public boolean AddUnit(Unit unit, Point point, int id);
-    
+
     public boolean RemoveThing(Thing thing);
-    
+
     public Point GetLocationOfThing(Thing thing);
-    
+
     public Thing[] LocationThings(Point point);
-    
+
     public int height = 1000;
     public int width = 1000;
 }

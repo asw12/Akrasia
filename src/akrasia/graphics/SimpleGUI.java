@@ -49,12 +49,12 @@ import javax.swing.WindowConstants;
 
 import sun.awt.Graphics2Delegate;
 
-public class SimpleGUI extends GUI{    
+public class SimpleGUI extends GUI{
     public APanel panel;
-    
+
     BufferedImage thingsimage;
     Dimension dimensions;
-    
+
     Point cursor = null;
         Thing cursorover = null;
         boolean cursorlock = false;
@@ -62,10 +62,10 @@ public class SimpleGUI extends GUI{
         long cursorTime;
         int cursorSpeed = 0;
         int cursorSlowSpeed = 160;
-    
+
     LinkedList<Byte> moveKeys = new LinkedList<Byte>(); //TODO: this should just be an array
         boolean moveReady = true; //should send a move message
-    
+
     public SimpleGUI() {
         super();
         dimensions = new Dimension(800, 640);
@@ -74,12 +74,12 @@ public class SimpleGUI extends GUI{
         console.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         console.setVisible(true);
     }
-    
+
     public void Initialize(){
         keyListener = new KeyListener(){
                 public void keyTyped(KeyEvent e) {
                 }
-                
+
                 public void mvkey(int key, byte modifiers){
                     for(int i = 0; i < moveKeys.size(); i++){
                         if((moveKeys.get(i) & 0xf) == key){
@@ -98,11 +98,11 @@ public class SimpleGUI extends GUI{
                         }
                     }
                 }
-                
+
                 public void keyPressed(KeyEvent e) {
                     Byte front =  moveKeys.peekFirst();
                     byte modifiers = (byte)((e.isShiftDown() ? 0x80 : 0) + (e.isControlDown() ? 0x40 : 0) + (e.isMetaDown() ? 0x20 : 0) + (e.isAltDown() ? 0x10 : 0));
-                    
+
                     switch(e.getKeyCode()){
                         case 'Y': mvkey(7, modifiers); break;
                         case 'K': mvkey(8, modifiers); break;
@@ -112,7 +112,7 @@ public class SimpleGUI extends GUI{
                         case 'B': mvkey(1, modifiers); break;
                         case 'J': mvkey(2, modifiers); break;
                         case 'N': mvkey(3, modifiers); break;
-                    
+
                         case 'T': Debug(2); break;
                         case 'G': Debug(5); break;
                         case 'R': Debug(0); break;
@@ -120,7 +120,7 @@ public class SimpleGUI extends GUI{
                         case 'W': Debug(4); break;
                         case 'V': Debug(1); break;
                         case 'Q': Debug(6); break;
-                    
+
                         case 16: if(moveKeys.size()>0) moveKeys.set(0, (byte)(moveKeys.get(0) | 0x80)); break;
                         case 17: if(moveKeys.size()>0) moveKeys.set(0, (byte)(moveKeys.get(0) | 0x40)); break;
                         case 18: if(moveKeys.size()>0) moveKeys.set(0, (byte)(moveKeys.get(0) | 0x10)); break;
@@ -138,7 +138,7 @@ public class SimpleGUI extends GUI{
                         case 'B': rmkey(1); break;
                         case 'J': rmkey(2); break;
                         case 'N': rmkey(3); break;
-                    
+
                         case 16: if(moveKeys.size()>0) moveKeys.set(0, (byte)(moveKeys.get(0) ^ 0x80)); break;
                         case 17: if(moveKeys.size()>0) moveKeys.set(0, (byte)(moveKeys.get(0) ^ 0x40)); break;
                         case 18: if(moveKeys.size()>0) moveKeys.set(0, (byte)(moveKeys.get(0) ^ 0x10)); break;
@@ -149,24 +149,24 @@ public class SimpleGUI extends GUI{
             };
 
         console.addKeyListener(keyListener);
-        
+
         panel = new APanel(this);
-        
+
         console.add(panel);
-        
+
         console.paintComponents(console.getGraphics());
-        
+
         panel.repaint();
     }
-    
+
     public void Tick(){
         CurrentTime = System.currentTimeMillis();
-        
+
         if(!moveKeys.isEmpty()){
             if(client.map.IDUnit.get(client.clientid).delay < System.currentTimeMillis()){
                 try{
                     byte a = moveKeys.get(0); //debug
-                    
+
                     byte modifiers = (byte)(a & 0xf0);
                     int b = (moveKeys.get(0) & 0xf);
                     switch(b){
@@ -190,7 +190,7 @@ public class SimpleGUI extends GUI{
             }
         }
     }
-    
+
     //TODO: move to APanel
     public void EditedInanimate() {
         panel.ChangedThings = true;
@@ -208,7 +208,7 @@ public class SimpleGUI extends GUI{
             panel.repaint();
         }
     }
-    
+
     public boolean MoveCardinal(Constant.DIRECTIONS direction, byte modifiers){
         if(cursor == null){
             if(moveReady){
@@ -219,7 +219,7 @@ public class SimpleGUI extends GUI{
         //You are targetting something
         else{
             //TODO: something like shift is held (override auto targetting key)
-            
+
             if((modifiers & 0x80) != 0){ //shift
                 cursor = (Point)cursor.clone();
                 cursorlock = false;
@@ -235,9 +235,9 @@ public class SimpleGUI extends GUI{
                         case NORTHWEST: case NORTH: case NORTHEAST:  cursor.y--; break;
                         case SOUTHWEST: case SOUTH: case SOUTHEAST:  cursor.y++; break;
                     }
-                    
+
                     Thing[] things = client.map.LocationThings(cursor);
-                    
+
                     if(things.length > 0){
                         cursorover = things[0];
                     }
@@ -248,7 +248,7 @@ public class SimpleGUI extends GUI{
                 }
             }
             else{
-                //Target  
+                //Target
             }
         }
         return true;
@@ -263,11 +263,11 @@ public class SimpleGUI extends GUI{
         moveReady = true;
         System.out.println(s);
     }
-    
+
     public Point Target(Constant.TARGETING targetting){
         Point p;
         switch(targetting){
-            case CLOSEST: 
+            case CLOSEST:
                 cursorover = client.map.GetUnits().get(0);
                 cursorlock = true;
                 p = client.map.GetLocationOfThing(cursorover); break;
@@ -284,7 +284,7 @@ public class SimpleGUI extends GUI{
         cursorlock = false;
         cursorover = null;
     }
-    
+
     /**
      *Continues the targetting algorithm, starting at the Point given.
      * @param targetting
@@ -338,7 +338,7 @@ public class SimpleGUI extends GUI{
             break;
         case 4:
             Point p = client.map.GetLocationOfThing(client.map.GetUnits().get(0));
-            for(Point p2 : Constant.CircleOfPoints(p.x, p.y, 
+            for(Point p2 : Constant.CircleOfPoints(p.x, p.y,
                                                    client.map.GetUnits().get(0).GetStat(Constant.STATS.SIGHT))){
                 client.map.FloorTiles.put(p2, 0);
             }

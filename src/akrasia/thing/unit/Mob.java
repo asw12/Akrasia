@@ -20,7 +20,7 @@ public class Mob extends Unit{
     public Mob(int i) {
         super(i);
     }
-    
+
     public int entry;
     ArrayList<Integer> players = new ArrayList<Integer>();
     static int ticks = 0;
@@ -31,12 +31,12 @@ public class Mob extends Unit{
         Caster,
         Assist
     }
-    
+
     public AITypes ai = AITypes.Default;
-    
+
     public void TickAI(Server server, LevelMap map){
         Point p = map.GetLocationOfThing(this);
-        
+
         Point p2 = null;
         while(p2 == null){
             p2 = map.GetLocationOfThing(server.clients.get(0).controlledUnit);

@@ -17,7 +17,7 @@ import java.util.Properties;
 public class Settings {
     private static boolean loaded = false;
     private static Properties props = null;
-    
+
     // Database Settings
     public static boolean UseRelationalDB = true;
 
@@ -26,7 +26,7 @@ public class Settings {
     // In-game Options
 
     // Key Bindings
-    
+
     public static String getProperty(String str){
         if(!loaded){
             props = new Properties();
@@ -46,7 +46,7 @@ public class Settings {
                 e.printStackTrace();
             }
         }
-        
+
         return props.getProperty(str);
     }
 }

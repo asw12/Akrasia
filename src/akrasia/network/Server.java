@@ -44,52 +44,52 @@ public class Server extends Thread{
          * 2) SimpleGUI joins server
          * 3) SimpleGUI changed to in-game mode
          */
-        
+
         SimpleGUI simple = new SimpleGUI();
         simple.AddClient(new Client(simple));
-    
-        // Uncomment to run two servers       
+
+        // Uncomment to run two servers
         SimpleGUI simple2 = new SimpleGUI();
         simple2.AddClient(new Client(simple2)); // */
-        
+
         Server server = new Server(6112);
-        
+
         // Blank window will appear if no server can be found
         try{
             simple.client.JoinServer(InetAddress.getByName("67.180.54.71"), 6112);
-            
+
             simple2.client.JoinServer(InetAddress.getByName("67.180.54.71"), 6112);
         }
         catch(Exception e){
-            e.printStackTrace(); 
+            e.printStackTrace();
         }
     }
-    
+
     public Server(int port) {
         AkrasiaDB = new Database();
-        
+
         clients = new ArrayList<PseudoClient>();
         connections = new ArrayList<ServerClient>();
         clientfloormaps = new ArrayList<HashMap<Point, Integer>>();
-        
+
         map = new LevelMap();  //TODO: this seems out of place
-        
+
         try{
             socket = new ServerSocket(port){};
             socket.setSoTimeout(1000);
         }
         catch(Exception e){
-            e.printStackTrace(); 
+            e.printStackTrace();
         }
-        
+
         start();
     }
-    
+
     public void run(){
         running = true;
         Thread socketThread = new Thread(){
             Server server = Server.this;
-            
+
             public void run(){
                 while(!socket.isClosed()){
                     try{
@@ -107,57 +107,57 @@ public class Server extends Thread{
                     catch(Exception e){
                     }
                 }
-                
+
                 System.out.println("Socket Closed");
             }
         };
         socketThread.start();
-        
+
         while(connections.size() == 0){
             try{
                 sleep(100);
             }
             catch(InterruptedException e){
-                
+
             }
         }
-        
+
         try{socket.close();} catch(Exception e){ e.printStackTrace(); }
-        
+
         while(running){
                 Tick(System.currentTimeMillis());
-                
+
                 try{
                     sleep(20);
                 }
                 catch(InterruptedException e){
-                    
+
                 }
         }
     }
-    
+
     boolean running;
         ServerSocket socket;
-    
+
     Database AkrasiaDB;
     ArrayList<ServerClient> connections;
         public ArrayList<PseudoClient> clients;
         ArrayList<HashMap<Point, Integer>> clientfloormaps;
     LevelMap map;
-    
+
     Long currentTime;
-    
+
     public void AddClient(PseudoClient client){
         clients.add(client);
         clientfloormaps.add(new HashMap<Point, Integer>());
     }
 
-    void ProcessMsg(int c, String str){            
+    void ProcessMsg(int c, String str){
         currentTime = System.currentTimeMillis();
-        
+
         String[] strs = str.split(":");
         Constant.OPCODES opcode = Constant.OPCODES.values()[Integer.valueOf(strs[0])];
-        
+
         switch(opcode){
             case MOVECARDINAL: RMSG_MoveCardinal(c, strs); break;
             case MOVE: RMSG_Move(c, strs); break;
@@ -166,24 +166,24 @@ public class Server extends Thread{
             default : System.out.println("Error - Server:ProcessMsg : " + opcode.toString() + " from " + c); break;
         }
     }
-    
+
     void SendMsg(int client, Constant.OPCODES opcode, String[] options){
         String str = MakeMsg(opcode, options);
-        
+
         try{
             connections.get(client).output.write(str + "\n");
 //            connections.get(client).output.newLine();
             connections.get(client).output.flush();
         }
         catch(Exception e){
-            e.printStackTrace(); 
+            e.printStackTrace();
         }
     }
-    
+
     void RMSG_Move(int c, String[] strs){
         /*Point p = map.GetLocationOfThing(map.IDUnit.get(c));
         if(map.CanMove(clients.get(c).controlledUnit, p)){
-            
+
         }
         else{
             if(false){
@@ -197,12 +197,12 @@ public class Server extends Thread{
     void RMSG_MoveCardinal(int c, String[] strs){
         Unit unit = clients.get(c).controlledUnit;
         if(unit.delay > currentTime){
-            SMSG_Reject(c, "Error - RMSG_MoveCardinal - client cannot move yet!"); //TODO: return error; 
+            SMSG_Reject(c, "Error - RMSG_MoveCardinal - client cannot move yet!"); //TODO: return error;
             return;
         }
         int x = map.GetLocationOfThing(unit).x;
         int y = map.GetLocationOfThing(unit).y;
-        
+
         switch(Constant.DIRECTIONS.values()[Integer.valueOf(strs[2])]){
             case NORTHWEST: case WEST: case SOUTHWEST: x -= 1; break;
             case NORTHEAST: case EAST: case SOUTHEAST: x += 1; break;
@@ -211,9 +211,9 @@ public class Server extends Thread{
             case NORTHWEST: case NORTH: case NORTHEAST:  y -= 1; break;
             case SOUTHWEST: case SOUTH: case SOUTHEAST:  y += 1; break;
         }
-        
+
         Point p = new Point(x, y);
-        
+
         if(map.CanMove(unit, p)){
             PlayerMove(c, unit, p);
         }
@@ -231,12 +231,12 @@ public class Server extends Thread{
     void RMSG_Join(int c, String[] strs){
         AddClient(new PseudoClient());
         Point p = map.StartLocation;
-        
+
         //TODO: Debug walls
         /*for(int i = 0; i < 100; i++){
             CreateWall(new Point((int)(Math.random()*60), (int)(Math.random()*60)), Constant.STRUCT.WALL.ROCK);
         } // */
-        
+
         map.AddUnit(clients.get(c).controlledUnit, p, c);
         SMSG_AcknowledgeJoin(clients.get(c).controlledUnit.id, new Mob(), p, c);
 
@@ -247,17 +247,17 @@ public class Server extends Thread{
             }
             map.AddUnit(new Mob(1), pp, 10 + i);
         }*/
-                                                       
+
         Reveal(c);
     }
-    
+
     private void RMSG_Chat(int c, String[] strs) {
         Point p = ((Point)(map.GetLocationOfThing(clients.get(c).controlledUnit).clone()));
         map.FloorTiles.put(p, -Constant.STRUCT.WALL.ROCK.ordinal()-1);
         SMSG_WallAppear(c, Constant.STRUCT.WALL.ROCK.ordinal(), p);
         SMSG_Reveal(c, ((Point)(map.GetLocationOfThing(clients.get(c).controlledUnit).clone())), map.GetUnits().get(0).GetStat(Constant.STATS.SIGHT)); //TODO: DEBUG
     }
-    
+
     private void SMSG_AcknowledgeJoin(int c, Thing thing, Point p, int thingid){
         SendMsg(c, Constant.OPCODES.ACKNOWLEDGEJOIN, new String[]{String.valueOf(thing.id), Constant.PointToString(p), String.valueOf(thingid)});
     }
@@ -282,28 +282,28 @@ public class Server extends Thread{
     private void SMSG_Reject(int c, String str) {
         SendMsg(c, Constant.OPCODES.REJECT, new String[]{str});
     }
-    
+
     private String MakeMsg(Constant.OPCODES opcode, String[] options){
         String s = String.valueOf(opcode.ordinal());
         int o = 0;
         int logic = opcode.getLogic();
-        
+
         while(logic!=0){
             if((logic & 1) != 0)
                 o++;
             logic >>= 1;
         }
-        
+
         if(options.length != o){
             System.out.println("Error - MakeMsg : number of options provided : " + opcode.toString());
         }
-        
+
         for(int i = 0; i< o; i++){
             s+=":" + options[i];
         }
-        
+
         return s;
-    }    
+    }
     private void Reveal(int c){
         Unit controlled = clients.get(c).controlledUnit;
         Point p = map.GetLocationOfThing(controlled);
@@ -341,20 +341,20 @@ public class Server extends Thread{
                 }
             //}
         }
-        
+
         for(Point p2 : raycast.getWalls()){
             clientfloormaps.get(c).put(p2, map.FloorTiles.get(p2));
             SMSG_WallAppear(c, Constant.STRUCT.WALL.ROCK.ordinal(), p2);
         }
         SMSG_Reveal(c, p, radius);
     }
-    
+
     // TODO: this should not be here
     public void CreateWall(Point p, Constant.STRUCT.WALL wall){
         map.FloorTiles.put(p, -wall.ordinal() - 1);
         //SMSG_WallAppear(c, Constant.STRUCT.WALL.ROCK.ordinal(), p);
     }
-    
+
     /**
      * Runs AIs and updates environments. Add a long (currentTime) parameter?
      */

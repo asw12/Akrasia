@@ -23,14 +23,14 @@ import oracle.toplink.tools.sessionmanagement.SessionManager;
 
 public class Database {
     // Do not use
-    /*public static void main(String[] args){        
+    /*public static void main(String[] args){
         if(args.length > 0 && args[0] == "reinitialize") {
             adb.Armageddon();
         }
     }*/
-    
+
     protected static DatabaseSession session;
-    
+
     public Database() {
         if(Settings.UseRelationalDB)
         {
@@ -43,14 +43,14 @@ public class Database {
     /**
      * Runs the necessary querries for setting up a table for Akrasia.
      * All the included .SQL query files should use INSERT IGNORE or CREATE *** IF NOT EXISTS
-     * statements exclusively, as this method is not intended to overwrite anything unless 
+     * statements exclusively, as this method is not intended to overwrite anything unless
      * used with Armageddon().
-     * 
+     *
      * This method is only intended to be used on a clean Database.
      */
     private void InitializeDatabase() {
     }
-    
+
     /**
      * Deletes all tables associated with Akrasia, then reinitializes it.
      */
@@ -58,7 +58,7 @@ public class Database {
         //TODO: Write and replace with TopLink statement that drops all tables
         InitializeDatabase();
     }
-    
+
     /**
      * Retrieves the String of the location of the sessions settings.
      * @return String

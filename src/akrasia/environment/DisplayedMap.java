@@ -20,14 +20,14 @@ public class DisplayedMap extends LevelMap{
         }
         return 0;
     }
-    
+
     //TODO: Fix potential concurrent mod error
     public HashMap<Point, Integer> GetAllFloorTiles(){
         synchronized(FloorTiles){
             return (HashMap<Point, Integer>)FloorTiles.clone();
         }
     }
-    
+
     public boolean MoveThing(Thing thing, Point point, Point oldpoint){
         boolean flag = LocationThings.get(ThingLocation.get(thing)).remove(thing);
         if(flag){
@@ -36,11 +36,11 @@ public class DisplayedMap extends LevelMap{
             }
             ThingLocation.remove(thing);
         }
-        
+
         oldpoint.x = point.x; oldpoint.y = point.y;
-        
+
         PlaceThing(thing, oldpoint);
-        
+
         return true;
     }
 }

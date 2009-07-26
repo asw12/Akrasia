@@ -16,7 +16,7 @@ public class AException extends Exception{
         DEFAULT("Default statement"),
         OUT_OF_MAP_BOUNDS("Coordinates are outside of the map's bounds"),
         INVALID_DIMENSIONS("Dimensions are invalid");
-        
+
         private String statement;
         private ExceptionType(String statement){ this.statement = statement; }
         String GetString(){ return "Akrasia: " + statement; }

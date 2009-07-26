@@ -16,7 +16,7 @@ import java.util.HashMap;
 public class Constant {
     //Debug constant (for quick access)
     public final static int sleeptime = 20;
-    
+
     public enum DIRECTIONS{ SOUTHWEST, SOUTH, SOUTHEAST,
                             WEST,      NONE,  EAST,
                             NORTHWEST, NORTH, NORTHEAST };
@@ -42,11 +42,11 @@ public class Constant {
             }
         }
     }
-    
+
     /****************
      * Message Passing
      ****************/
-    
+
     public static final byte RequiresThing =                      0x01;
     public static final byte RequiresThing2 =                     0x02;
     public static final byte RequiresDestination =                0x04;
@@ -54,25 +54,25 @@ public class Constant {
     public static final byte RequiresString2 =                    0x10;
     public static final byte RequiresOption =                     0x20;
     public static final byte RequiresOption2 =                    0x40;
-    
+
     public enum OPCODES{
         //client to server or both
         MOVECARDINAL  {public byte getLogic(){return RequiresThing2 + RequiresOption;}},
         MOVE          {public byte getLogic(){return RequiresThing2 + RequiresDestination;}},
-        START_CAST    {public byte getLogic(){return RequiresThing2 + RequiresOption;}}, 
-        STOP_CAST     {public byte getLogic(){return 0;}}, 
-        TALK          {public byte getLogic(){return RequiresThing2 + RequiresThing;}},  
-        USEITEM       {public byte getLogic(){return RequiresOption;}}, 
-        USEGOBJECT    {public byte getLogic(){return RequiresThing;}}, 
+        START_CAST    {public byte getLogic(){return RequiresThing2 + RequiresOption;}},
+        STOP_CAST     {public byte getLogic(){return 0;}},
+        TALK          {public byte getLogic(){return RequiresThing2 + RequiresThing;}},
+        USEITEM       {public byte getLogic(){return RequiresOption;}},
+        USEGOBJECT    {public byte getLogic(){return RequiresThing;}},
         EQUIP         {public byte getLogic(){return RequiresOption2 + RequiresOption;}}, //slot and item
-        UNEQUIP       {public byte getLogic(){return RequiresOption;}}, 
+        UNEQUIP       {public byte getLogic(){return RequiresOption;}},
         SKILL         {public byte getLogic(){return RequiresOption;}},
-        DROP          {public byte getLogic(){return RequiresOption;}},   
-        THROW         {public byte getLogic(){return RequiresOption + RequiresDestination;}},   
-        
+        DROP          {public byte getLogic(){return RequiresOption;}},
+        THROW         {public byte getLogic(){return RequiresOption + RequiresDestination;}},
+
         JOIN          {public byte getLogic(){return RequiresString + RequiresString2;}},
         CHAT          {public byte getLogic(){return RequiresString;}},
-        
+
         //server to client
         ACKNOWLEDGEJOIN {public byte getLogic(){return RequiresThing + RequiresDestination + RequiresOption;}},
         CONFIRM         {public byte getLogic(){return 0;}},
@@ -82,20 +82,20 @@ public class Constant {
         UNITAPPEAR      {public byte getLogic(){return RequiresThing + RequiresDestination + RequiresOption;}},
         REVEAL          {public byte getLogic(){return RequiresDestination + RequiresOption;}},
         DISAPPEAR       {public byte getLogic(){return RequiresThing;}},
-        ADDSSTATUS      {public byte getLogic(){return RequiresThing;}}, 
+        ADDSSTATUS      {public byte getLogic(){return RequiresThing;}},
         REMOVESTATUS    {public byte getLogic(){return RequiresThing;}};
-         
+
         public abstract byte getLogic();
     };
-    
+
     public enum ACTIONS{
         MOVE,
         REST,
         CAST;
     }
-    
+
     public enum STATUS{  };
-    
+
     public enum TARGETING{
         MANUAL,
         CLOSEST,
@@ -103,9 +103,9 @@ public class Constant {
         ASSIST,
         CLUSTER;
     }
-    
+
     public enum ANIMATIONS{   }
-    
+
     public enum STATS{
         SIGHT(12, 20),
         RANGE(0, 9);
@@ -117,10 +117,10 @@ public class Constant {
             this.max = max;
         }
     }
-    
+
     /**
      * This class represents an object in the cell that is part of the structure of teh dungeon.
-     * 
+     *
      * Structure of the dungeon: Wall or Floor.
      */
     public static class STRUCT{
@@ -141,12 +141,12 @@ public class Constant {
             METAL;
         }
     }
-    
+
     public static enum THINGTYPE{ //rename when used
         Potion,
         Weapon;
     }
-    
+
     public static String PointToString(Point p){
         return p.x + "," + p.y;
     }
@@ -154,11 +154,11 @@ public class Constant {
         String[] ss = s.split(",");
         return new Point(Integer.valueOf(ss[0]), Integer.valueOf(ss[1]));
     }
-    
+
     /****************
      * Vision Methods
      ****************/
-    
+
     /**
      *
      * @param x
@@ -169,24 +169,24 @@ public class Constant {
     public static ArrayList<Point> CircleOfPoints(int x, int y, int radius){
         ArrayList<Point> points = new ArrayList<Point>();
         points.add(new Point(x, y));
-        
+
         if(radius == 0){
             return points;
         }
         int r2 = radius*radius;
-        
+
         for(int x2 = x-radius; x2 <= x+radius; x2++){
             int x22 = Math.max(Math.abs(x2-x) - 1, 0);
             x22 *= x22;
-            
+
             for(int y2 = y - radius; y2 <= y + radius; y2++){
                 int y22 = Math.max(Math.abs(y2-y) - 1, 0);
                 y22 *= y22;
-                
+
                 int r3 = x22 + y22;
-                
+
                 int diff = Math.max(r2 - r3, 0);
-                
+
                 if(diff != 0){
                     points.add(new Point(x2, y2));
                 }
@@ -206,7 +206,7 @@ public class Constant {
     public static ArrayList<Point> LineOfPoints(int x0, int x1, int y0, int y1){
         ArrayList<Point> points = new ArrayList<Point>();
         points.add(new Point(x0, y0));
-        
+
         int dx = x1 - x0;
         int dy = y1 - y0;
         if(dx == 0 && dy == 0){
@@ -234,12 +234,12 @@ public class Constant {
                 points.add(new Point(x0, y0));
             }
         }
-        
+
         return points;
     }
     public static ArrayList<Point> TolerantLineOfPoints(HashMap<Point, Integer> walls, int x0, int x1, int y0, int y1){
         ArrayList<Point> points = new ArrayList<Point>();
-        
+
         int dx = x1 - x0;
         int dy = y1 - y0;
         if(dx == 0 && dy == 0){
@@ -268,7 +268,7 @@ public class Constant {
                     points.add(new Point(x0, y0));
                 }
         }
-        
+
         return points;
     }
     public static ArrayList<Point> FieldOfView(HashMap<Point, Integer> walls, int x, int y, int radius){

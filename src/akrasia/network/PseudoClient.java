@@ -8,8 +8,8 @@ import akrasia.thing.unit.Unit;
  */
 public class PseudoClient extends Thread{
     public Unit controlledUnit = new Player();
-    
+
     public void ReceiveMsg(String str){
-        
+
     }
 }
