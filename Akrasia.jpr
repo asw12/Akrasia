@@ -171,19 +171,15 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="JUnit Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <url n="id" path="../../../../../Program Files/Java/jdk1.6.0_12/jre/lib/ext/mysql-connector-java-5.1.8/Mysql-connector-java-5.1.8-bin.jar.library"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="Java EE 1.5"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
             <value n="id" v="Oracle JDBC"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Mysql-connector-java-5.1.8-bin.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -209,7 +205,17 @@
                <value n="version" v="1.6.0_12-ea"/>
             </hash>
          </list>
-         <list n="libraryDefinitions"/>
+         <list n="libraryDefinitions">
+            <hash>
+               <list n="classPath">
+                  <url path="lib/mysql-connector-java-5.1.8-bin.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Mysql-connector-java-5.1.8-bin.jar"/>
+               <value n="id" v="Mysql-connector-java-5.1.8-bin.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+         </list>
       </hash>
       <hash n="jdkReference">
          <url n="id" path="../1.6.0_12.jdk"/>
@@ -226,19 +232,15 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="JUnit Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <url n="id" path="../../../../../Program Files/Java/jdk1.6.0_12/jre/lib/ext/mysql-connector-java-5.1.8/Mysql-connector-java-5.1.8-bin.jar.library"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="Java EE 1.5"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
             <value n="id" v="Oracle JDBC"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Mysql-connector-java-5.1.8-bin.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>

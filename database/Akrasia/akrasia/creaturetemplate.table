@@ -1244,9 +1244,8 @@
     </entry>
     <entry>
       <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
-      <value class="oracle.javatools.db.IdentifierBasedID">
+      <value class="oracle.javatools.db.ReferenceID">
         <name>creaturetemplate</name>
-        <identifier class="java.lang.String">6845d1fa-28cf-4dcc-a19a-ec268d75ef94</identifier>
         <schemaName>akrasia</schemaName>
         <type>TABLE</type>
       </value>

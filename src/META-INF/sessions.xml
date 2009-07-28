@@ -6,7 +6,7 @@
       <login xsi:type="database-login">
          <platform-class>oracle.toplink.platform.database.MySQL4Platform</platform-class>
          <user-name>akrasia</user-name>
-         <password>77F9BCD65FABB4501B550455987A268F</password>
+         <password>33249B2910CFF3FB152EBB80E80E9A10</password>
          <sequencing>
             <default-sequence xsi:type="table-sequence"/>
          </sequencing>

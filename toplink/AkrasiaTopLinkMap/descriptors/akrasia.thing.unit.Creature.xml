@@ -131,10 +131,6 @@
    <user-defined-query-keys>
       <user-defined-query-key>
          <name>entry</name>
-         <column-handle>
-            <column-table-name>akrasia.creatureinstance</column-table-name>
-            <column-name>entry</column-name>
-         </column-handle>
       </user-defined-query-key>
    </user-defined-query-keys>
    <primary-table-handle>
@@ -146,7 +142,7 @@
             <table-handle>
                <table-name>akrasia.creaturetemplate</table-name>
             </table-handle>
-            <primary-keys-have-same-name>false</primary-keys-have-same-name>
+            <primary-keys-have-same-name>true</primary-keys-have-same-name>
          </table-holder>
       </secondary-table-holders>
    </multi-table-info-policy>

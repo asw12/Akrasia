@@ -48,7 +48,7 @@ public class Server extends Thread{
         SimpleGUI simple = new SimpleGUI();
         simple.AddClient(new Client(simple));
 
-        // Uncomment to run two servers
+        /* // Uncomment to run two servers
         SimpleGUI simple2 = new SimpleGUI();
         simple2.AddClient(new Client(simple2)); // */
 
@@ -57,8 +57,8 @@ public class Server extends Thread{
         // Blank window will appear if no server can be found
         try{
             simple.client.JoinServer(InetAddress.getByName("67.180.54.71"), 6112);
-
-            simple2.client.JoinServer(InetAddress.getByName("67.180.54.71"), 6112);
+            //Thread.sleep(1000);
+            //simple2.client.JoinServer(InetAddress.getByName("67.180.54.71"), 6112);
         }
         catch(Exception e){
             e.printStackTrace();
@@ -121,8 +121,9 @@ public class Server extends Thread{
 
             }
         }
-
-        try{socket.close();} catch(Exception e){ e.printStackTrace(); }
+        
+        // TODO: Turn this into an in-game option
+        // try{socket.close();} catch(Exception e){ e.printStackTrace(); }
 
         while(running){
                 Tick(System.currentTimeMillis());

@@ -29,7 +29,7 @@
          <driver-class>com.mysql.jdbc.Driver</driver-class>
          <url>jdbc:mysql://localhost:3306/akrasia</url>
          <user-name>akrasia</user-name>
-         <password>77F9BCD65FABB4501B550455987A268F</password>
+         <password>33249B2910CFF3FB152EBB80E80E9A10</password>
          <save-password>true</save-password>
       </deployment-login>
       <development-login>Akrasia</development-login>

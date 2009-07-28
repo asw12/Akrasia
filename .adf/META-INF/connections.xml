@@ -9,21 +9,21 @@
          <StringRefAddr addrType="user">
             <Contents>akrasia</Contents>
          </StringRefAddr>
-         <StringRefAddr addrType="port">
-            <Contents>3306</Contents>
-         </StringRefAddr>
          <StringRefAddr addrType="hostname">
             <Contents>localhost</Contents>
          </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>3306</Contents>
+         </StringRefAddr>
          <SecureRefAddr addrType="password"/>
          <StringRefAddr addrType="DeployPassword">
-            <Contents>false</Contents>
-         </StringRefAddr>
-         <StringRefAddr addrType="driver">
-            <Contents>com.mysql.jdbc.Driver</Contents>
+            <Contents>true</Contents>
          </StringRefAddr>
          <StringRefAddr addrType="dataSourceName">
             <Contents>akrasia</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="driver">
+            <Contents>com.mysql.jdbc.Driver</Contents>
          </StringRefAddr>
       </RefAddresses>
    </Reference>

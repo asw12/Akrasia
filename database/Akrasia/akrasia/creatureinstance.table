@@ -763,9 +763,8 @@
     </entry>
     <entry>
       <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
-      <value class="oracle.javatools.db.IdentifierBasedID">
+      <value class="oracle.javatools.db.ReferenceID">
         <name>creatureinstance</name>
-        <identifier class="java.lang.String">ffebf704-8391-409f-b2f7-195543d1fb3b</identifier>
         <schemaName>akrasia</schemaName>
         <type>TABLE</type>
       </value>

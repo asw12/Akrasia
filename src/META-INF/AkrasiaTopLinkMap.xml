@@ -45,11 +45,6 @@
          <toplink:descriptor-type>independent</toplink:descriptor-type>
          <toplink:instantiation/>
          <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
-         <toplink:query-keys>
-            <toplink:query-key name="entry" xsi:type="toplink:direct-query-key">
-               <toplink:field table="creatureinstance" name="entry" xsi:type="opm:column"/>
-            </toplink:query-key>
-         </toplink:query-keys>
          <toplink:tables>
             <toplink:table name="akrasia.creatureinstance"/>
             <toplink:table name="akrasia.creaturetemplate"/>
@@ -59,7 +54,7 @@
    <toplink:login xsi:type="toplink:database-login">
       <toplink:platform-class>oracle.toplink.platform.database.MySQL4Platform</toplink:platform-class>
       <toplink:user-name>akrasia</toplink:user-name>
-      <toplink:password>77F9BCD65FABB4501B550455987A268F</toplink:password>
+      <toplink:password>33249B2910CFF3FB152EBB80E80E9A10</toplink:password>
       <toplink:driver-class>com.mysql.jdbc.Driver</toplink:driver-class>
       <toplink:connection-url>jdbc:mysql://localhost:3306/akrasia</toplink:connection-url>
    </toplink:login>
