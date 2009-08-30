@@ -1,8 +1,9 @@
-CREATE TABLE dungeonlevel 
-( 
-  `entry` INT(10) UNSIGNED NOT NULL,
-  `environment` INT(10) NOT NULL,
-  CONSTRAINT PRIMARY KEY ( `entry` ) );
+CREATE TABLE `dungeonlevel` (
+ `session` int(10) unsigned NOT NULL,
+ `entry` int(10) unsigned NOT NULL,
+ `environment` int(10) NOT NULL,
+ PRIMARY KEY (`session`, `entry`)
+);
 
 CREATE TABLE creaturetemplate 
 ( 
@@ -38,6 +39,6 @@ CREATE TABLE `creatureinstance` (
      ON DELETE NO ACTION,
  CONSTRAINT `creatureinstance_creaturetemplate` FOREIGN KEY (`entry`) REFERENCES `creaturetemplate` (`entry`) 
      ON DELETE NO ACTION,
- CONSTRAINT `creatureinstance_dungeonlevel` FOREIGN KEY (`map`) REFERENCES `dungeonlevel` (`entry`) 
+ CONSTRAINT `creatureinstance_dungeonlevel` FOREIGN KEY ( `session`, `map` ) REFERENCES `dungeonlevel` ( `session`,  `entry` )
      ON DELETE NO ACTION
 );
