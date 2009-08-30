@@ -30,10 +30,6 @@
                <opm:field table="creaturetemplate" name="AI" xsi:type="opm:column"/>
             </opm:attribute-mapping>
             <opm:attribute-mapping xsi:type="toplink:direct-mapping">
-               <opm:attribute-name>c</opm:attribute-name>
-               <opm:field table="creaturetemplate" name="char" xsi:type="opm:column"/>
-            </opm:attribute-mapping>
-            <opm:attribute-mapping xsi:type="toplink:direct-mapping">
                <opm:attribute-name>entry</opm:attribute-name>
                <opm:field table="creatureinstance" name="entry" xsi:type="opm:column"/>
             </opm:attribute-mapping>
@@ -45,10 +41,21 @@
          <toplink:descriptor-type>independent</toplink:descriptor-type>
          <toplink:instantiation/>
          <toplink:copying xsi:type="toplink:instantiation-copy-policy"/>
+         <toplink:query-keys>
+            <toplink:query-key name="entry" xsi:type="toplink:direct-query-key">
+               <toplink:field table="creaturetemplate" name="entry" xsi:type="opm:column"/>
+            </toplink:query-key>
+         </toplink:query-keys>
          <toplink:tables>
             <toplink:table name="akrasia.creatureinstance"/>
             <toplink:table name="akrasia.creaturetemplate"/>
          </toplink:tables>
+         <toplink:foreign-keys-for-multiple-table>
+            <opm:field-reference>
+               <opm:source-field table="creatureinstance" name="entry" xsi:type="opm:column"/>
+               <opm:target-field table="creaturetemplate" name="entry" xsi:type="opm:column"/>
+            </opm:field-reference>
+         </toplink:foreign-keys-for-multiple-table>
       </opm:class-mapping-descriptor>
    </opm:class-mapping-descriptors>
    <toplink:login xsi:type="toplink:database-login">

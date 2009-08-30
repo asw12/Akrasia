@@ -52,17 +52,6 @@
          </column-handle>
       </mapping>
       <mapping type="direct-to-field">
-         <name>c</name>
-         <attribute-handle>
-            <attribute-declaring-type-name>akrasia.thing.unit.Creature</attribute-declaring-type-name>
-            <attribute-name>c</attribute-name>
-         </attribute-handle>
-         <column-handle>
-            <column-table-name>akrasia.creaturetemplate</column-table-name>
-            <column-name>char</column-name>
-         </column-handle>
-      </mapping>
-      <mapping type="direct-to-field">
          <name>entry</name>
          <inherited>true</inherited>
          <attribute-handle>
@@ -127,6 +116,10 @@
    <user-defined-query-keys>
       <user-defined-query-key>
          <name>entry</name>
+         <column-handle>
+            <column-table-name>akrasia.creaturetemplate</column-table-name>
+            <column-name>entry</column-name>
+         </column-handle>
       </user-defined-query-key>
    </user-defined-query-keys>
    <primary-table-handle>
@@ -138,7 +131,11 @@
             <table-handle>
                <table-name>akrasia.creaturetemplate</table-name>
             </table-handle>
-            <primary-keys-have-same-name>true</primary-keys-have-same-name>
+            <primary-keys-have-same-name>false</primary-keys-have-same-name>
+            <reference-handle>
+               <reference-table-name>akrasia.creatureinstance</reference-table-name>
+               <reference-name>entry</reference-name>
+            </reference-handle>
          </table-holder>
       </secondary-table-holders>
    </multi-table-info-policy>

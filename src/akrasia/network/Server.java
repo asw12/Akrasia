@@ -355,6 +355,7 @@ public class Server
   {
     AddClient(new PseudoClient());
     LevelMap map = maps.get(joinMap);
+    activeMaps.add(map);
     Point p = map.StartLocation;
 
     //TODO: Debug walls
