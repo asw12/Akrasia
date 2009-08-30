@@ -147,15 +147,12 @@ public class SimpleGUI extends GUI{
                     }
                 }
             };
-
         console.addKeyListener(keyListener);
 
         panel = new APanel(this);
-
         console.add(panel);
 
         console.paintComponents(console.getGraphics());
-
         panel.repaint();
     }
 

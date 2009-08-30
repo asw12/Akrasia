@@ -120,10 +120,6 @@
          <attribute-declaring-type-name>akrasia.thing.unit.Unit</attribute-declaring-type-name>
          <attribute-name>stats</attribute-name>
       </attribute-handle>
-      <attribute-handle>
-         <attribute-declaring-type-name>akrasia.thing.unit.Mob</attribute-declaring-type-name>
-         <attribute-name>ticks</attribute-name>
-      </attribute-handle>
    </inherited-attribute-handles>
    <instantiation-policy>
       <policy-type>Default constructor</policy-type>

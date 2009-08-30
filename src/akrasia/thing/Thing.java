@@ -1,19 +1,32 @@
 package akrasia.thing;
 
-public class Thing {
-    public Thing() {
-    }
-    public Thing(int id) {
-        this.id = id;
-    }
+public class Thing
+{
+  public Thing()
+  {
+  }
 
-    private int map;
+  public Thing(int id)
+  {
+    this.id = id;
+  }
 
-    public int id = -1;
+  private int map;
+  private int id = -1;
+  private char c; //0x002E;
 
-    char c; //0x002E;
+  public int GetId()
+  {
+    return id;
+  }
 
-    public char GetSymbol(){
-        return c = '#';
-    }
+  public int GetMap()
+  {
+    return map;
+  }
+
+  public char GetSymbol()
+  {
+    return c = '#';
+  }
 }

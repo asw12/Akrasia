@@ -4,14 +4,15 @@ import akrasia.Constant;
 
 import akrasia.environment.LevelMap;
 
-import akrasia.network.Server;
-
 import java.awt.Point;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
- * A unit that has AI.
+ *A unit that has AI.
  *
  */
 public class Mob extends Unit{
@@ -23,7 +24,10 @@ public class Mob extends Unit{
 
     public int entry;
     ArrayList<Integer> players = new ArrayList<Integer>();
-    static int ticks = 0;
+
+    // represents the reactions of this mob to other units
+    HashMap<Integer, Unit> attitudeList = new HashMap<Integer, Unit>();
+
     enum AITypes{
         Default,
         Melee,
@@ -34,26 +38,20 @@ public class Mob extends Unit{
 
     public AITypes ai = AITypes.Default;
 
-    public void TickAI(Server server, LevelMap map){
+    public void TickAI(LevelMap map){
         Point p = map.GetLocationOfThing(this);
-
         Point p2 = null;
-        while(p2 == null){
-            p2 = map.GetLocationOfThing(server.clients.get(0).controlledUnit);
+
+        // TODO: do something ai-ey
+
+        Iterator<Map.Entry<Integer,Unit>> i = attitudeList.entrySet().iterator();
+        while(i.hasNext())
+        {
+          Map.Entry<Integer,Unit> e = i.next(); // guaranteed by iter to be not null.
+          p2 = map.GetLocationOfThing(e.getValue());
         }
-        if(!server.UnitMove(this, new Point(p.x + (int)Math.signum(p2.x - p.x), p.y + (int)Math.signum(p2.y - p.y)))){
-            delay += 500;
-        } // */
-        /*int dx = 0;
-        int dy = 0;
-        while(dx == 0 && dy == 0){
-            dx = (int)(3.*Math.random()) - 1;
-            dy = (int)(3.*Math.random()) - 1;
-        }
-        if(((p.x + dx < 0 || p.x + dx > 60 || p.y + dy < 0 || p.y + dy > 40)) || !server.UnitMove(this, new Point(p.x + dx, p.y + dy))){
-            //TickAI(server, map);
-            delay += 10;
-        } // */
+        if (p2 != null)
+          map.MoveUnit(this, new Point(p.x + (int)Math.signum(p2.x - p.x), p.y + (int)Math.signum(p2.y - p.y)));
     }
     public void AddVision(int i){
         players.add(i);
