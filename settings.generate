@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TransferDescriptor xmlns="http://xmlns.oracle.com/jdeveloper/110000transfer-descriptor">
+   <value n="cascadeDelete" v="true"/>
+   <value n="dependencyDepth" v="0"/>
+   <value n="includeAllDependencies" v="false"/>
+   <value n="includeDependencies" v="false"/>
+   <value n="manualReconcile" v="false"/>
+   <value n="plusSqlScript" v="false"/>
+   <value n="policy" v="oracle.ideimpl.db.transfer.OnToOnPolicy"/>
+   <value n="reconcile" v="false"/>
+   <value n="replace" v="true"/>
+   <list n="schemaObjectDescriptors">
+      <hash>
+         <value n="name" v="creatureinstance"/>
+         <value n="schemaName" v="akrasia"/>
+         <value n="type" v="TABLE"/>
+      </hash>
+      <hash>
+         <value n="name" v="creaturetemplate"/>
+         <value n="schemaName" v="akrasia"/>
+         <value n="type" v="TABLE"/>
+      </hash>
+      <hash>
+         <value n="name" v="dungeonlevel"/>
+         <value n="schemaName" v="akrasia"/>
+         <value n="type" v="TABLE"/>
+      </hash>
+      <hash>
+         <value n="name" v="session"/>
+         <value n="schemaName" v="akrasia"/>
+         <value n="type" v="TABLE"/>
+      </hash>
+   </list>
+   <value n="sourceConnectionStore" v="/C:/Coding/Akrasia/Akrasia.jws"/>
+   <value n="sourceIdentifier" v="Akrasia"/>
+   <value n="targetConnectionStore" v="/C:/Coding/Akrasia/Akrasia.jws"/>
+   <value n="targetIdentifier" v="Akrasia"/>
+   <hash n="targets">
+      <hash n="oracle.ideimpl.db.transfer.ProviderTransferTarget"/>
+   </hash>
+   <value n="targetSchemaName"/>
+   <value n="targetTableSpace"/>
+</TransferDescriptor>
