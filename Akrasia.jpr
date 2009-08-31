@@ -163,10 +163,6 @@
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
          <hash>
-            <value n="id" v="TopLink"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="Oracle XML Parser v2"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -218,15 +214,11 @@
          </list>
       </hash>
       <hash n="jdkReference">
-         <url n="id" path="../1.6.0_12.jdk"/>
+         <url n="id" path="../../Oracle/Middleware/jdeveloper/system/system11.1.1.0.31.51.56/o.jdeveloper/1.6.0_16.jdk"/>
          <value n="isJDK" v="true"/>
-         <value n="jdkVersion" v="1.6.0_12"/>
+         <value n="jdkVersion" v="1.6.0_16"/>
       </hash>
       <list n="libraryReferences">
-         <hash>
-            <value n="id" v="TopLink"/>
-            <value n="isJDK" v="false"/>
-         </hash>
          <hash>
             <value n="id" v="Oracle XML Parser v2"/>
             <value n="isJDK" v="false"/>

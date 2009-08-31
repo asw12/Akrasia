@@ -1,9 +1,5 @@
 package save;
 
-// temporary libraries
-import com.mysql.jdbc.exceptions.*;
-import com.mysql.jdbc.jdbc2.optional.*;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
@@ -16,10 +12,9 @@ import javax.naming.*;
 import java.sql.*;
 import java.util.*;
 
-import oracle.toplink.sessions.DatabaseSession;
-import oracle.toplink.sessions.UnitOfWork;
-import oracle.toplink.tools.sessionconfiguration.XMLSessionConfigLoader;
-import oracle.toplink.tools.sessionmanagement.SessionManager;
+import org.eclipse.persistence.sessions.DatabaseSession;
+import org.eclipse.persistence.sessions.factories.SessionManager;
+import org.eclipse.persistence.sessions.factories.XMLSessionConfigLoader;
 
 public class Database {
     // Do not use
@@ -35,7 +30,7 @@ public class Database {
         if(Settings.UseRelationalDB)
         {
             XMLSessionConfigLoader loader = new XMLSessionConfigLoader(getSessionsXmlPath());
-            SessionManager mgr = oracle.toplink.tools.sessionmanagement.SessionManager.getManager();
+            SessionManager mgr = SessionManager.getManager();
             session = (DatabaseSession)mgr.getSession(loader, getSessionName(), Thread.currentThread().getContextClassLoader(), true, true);
         }
     }
